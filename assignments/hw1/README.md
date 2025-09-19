@@ -1,7 +1,7 @@
 # Homework 1
 
 > This assignment includes 2 parts.
-
+>
 > - Part 1 is to create one or two slides to introduce yourself to your
     classmates and upload it to `Assignment #1 Intro slides`.
 > - Part 2 is to input data about yourself into a spreadsheet Social Network

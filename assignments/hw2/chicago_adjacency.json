@@ -1,0 +1,454 @@
+{
+  "Near North Side": [
+    "Loop"
+  ],
+  "Loop": [
+    "Near North Side",
+    "Near South Side"
+  ],
+  "Near South Side": [
+    "Loop"
+  ],
+
+  "O'Hare": [
+    "Norwood Park"
+  ],
+  "Edison Park": [
+    "Norwood Park"
+  ],
+  "Norwood Park": [
+    "Edison Park",
+    "Forest Glen",
+    "Jefferson Park",
+    "O'Hare"
+  ],
+  "Jefferson Park": [
+    "Forest Glen",
+    "Norwood Park"
+  ],
+  "Forest Glen": [
+    "North Park",
+    "Albany Park",
+    "Jefferson Park",
+    "Norwood Park"
+  ],
+  "North Park": [
+    "West Ridge",
+    "Lincoln Square",
+    "Albany Park",
+    "Forest Glen"
+  ],
+  "Albany Park": [
+    "North Park",
+    "Lincoln Square",
+    "Forest Glen"
+  ],
+  "West Ridge": [
+    "Rogers Park",
+    "Edgewater",
+    "Lincoln Square",
+    "North Park"
+  ],
+  "Lincoln Square": [
+    "West Ridge",
+    "Edgewater",
+    "Uptown",
+    "Albany Park",
+    "North Park"
+  ],
+  "Rogers Park": [
+    "Edgewater",
+    "West Ridge"
+  ],
+  "Edgewater": [
+    "Rogers Park",
+    "Uptown",
+    "Lincoln Square",
+    "West Ridge"
+  ],
+  "Uptown": [
+    "Edgewater",
+    "Lincoln Square"
+  ],
+
+  "Chatham": [
+    "Avalon Park",
+    "Calumet Heights",
+    "Burnside",
+    "Roseland"
+  ],
+  "Roseland": [
+    "Chatham",
+    "Burnside",
+    "Pullman",
+    "Riverdale",
+    "West Pullman"
+  ],
+  "West Pullman": [
+    "Roseland",
+    "Pullman",
+    "Riverdale"
+  ],
+  "Avalon Park": [
+    "South Chicago",
+    "Calumet Heights",
+    "Burnside",
+    "Chatham"
+  ],
+  "Burnside": [
+    "Avalon Park",
+    "Calumet Heights",
+    "South Deering",
+    "Pullman",
+    "Roseland",
+    "Chatham"
+  ],
+  "Calumet Heights": [
+    "Avalon Park",
+    "South Chicago",
+    "East Side",
+    "South Deering",
+    "Pullman",
+    "Burnside",
+    "Chatham"
+  ],
+  "Pullman": [
+    "Burnside",
+    "Calumet Heights",
+    "South Deering",
+    "Riverdale",
+    "West Pullman",
+    "Roseland",
+    "Chatham"
+  ],
+  "South Deering": [
+    "Calumnet Heights",
+    "South Chicago",
+    "East Side",
+    "Hegewisch",
+    "Riverdale",
+    "Pullman",
+    "Burnside"
+  ],
+  "Riverdale": [
+    "Pullman",
+    "South Deering",
+    "Hegewisch",
+    "West Pullman",
+    "Roseland"
+  ],
+  "Hegewisch": [
+    "South Deering",
+    "East Side",
+    "Riverdale"
+  ],
+  "South Chicago": [
+    "East Side",
+    "South Deering",
+    "Calumet Heights",
+    "Avalon Park"
+  ],
+  "East Side": [
+    "South Chicago",
+    "Hegewisch",
+    "South Deering",
+    "Calumet Heights"
+  ],
+
+  "Ashburn": [
+    "Auburn Gresham",
+    "Beverly"
+  ],
+  "Beverly": [
+    "Ashburn",
+    "Auburn Gresham",
+    "Washington Heights",
+    "Morgan Park",
+    "Mount Greenwood"
+  ],
+  "Mount Greenwood": [
+    "Beverly",
+    "Morgan Park"
+  ],
+  "Auburn Gresham": [
+    "Washington Heights",
+    "Beverly",
+    "Ashburn"
+  ],
+  "Washington Heights": [
+    "Auburn Gresham",
+    "Morgan Park",
+    "Beverly"
+  ],
+  "Morgan Park": [
+    "Beverly",
+    "Washington Heights",
+    "Mounth Greenwood"
+  ],
+
+  "North Center": [
+    "Lake View",
+    "Lincoln Park",
+    "Logan Square",
+    "Avondale"
+  ],
+  "Avondale": [
+    "North Center",
+    "Lincoln Park",
+    "Logan Square"
+  ],
+  "Logan Square": [
+    "Avondale",
+    "North Center",
+    "Lincoln Park"
+  ],
+  "Lake View": [
+    "Lincoln Park",
+    "North Center"
+  ],
+  "Lincoln Park": [
+    "North Center",
+    "Lake View",
+    "Logan Square",
+    "Avondale"
+  ],
+
+  "Dunning": [
+    "Portage Park",
+    "Belmont Cragin",
+    "Montclare"
+  ],
+  "Montclare": [
+    "Dunning",
+    "Belmont Cragin"
+  ],
+  "Portage Park": [
+    "Irving Park",
+    "Hermosa",
+    "Belmont Cragin",
+    "Dunning"
+  ],
+  "Belmont Cragin": [
+    "Portage Park",
+    "Irving Park",
+    "Hermosa",
+    "Montclare",
+    "Dunning"
+  ],
+  "Irving Park": [
+    "Hermosa",
+    "Belmont Cragin",
+    "Portage Park"
+  ],
+  "Hermosa": [
+    "Irving Park",
+    "Belmont Cragin",
+    "Portage Park"
+  ],
+
+  "Bridgeport": [
+    "Armour Square",
+    "Fuller Park"
+  ],
+  "Armour Square": [
+    "Douglas",
+    "Grand Boulevard",
+    "Fuller park",
+    "Bridgeport"
+  ],
+  "Fuller Park": [
+    "Armour Square",
+    "Douglas",
+    "Grand Boulevard",
+    "Washington Park",
+    "Bridgeport"
+  ],
+  "Douglas": [
+    "Oakland",
+    "Grand Boulevard",
+    "Fuller Park",
+    "Armour Square"
+  ],
+  "Grand Boulevard": [
+    "Douglas",
+    "Oakland",
+    "Kenwood",
+    "Hyde Park",
+    "Washington Park",
+    "Fuller Park",
+    "Armour Square"
+  ],
+  "Washington Park": [
+    "Grand Boulevard",
+    "Kenwood",
+    "Hyde Park",
+    "Woodlawn",
+    "Greater Grand Crossing",
+    "Fuller Park"
+  ],
+  "Greater Grand Crossing": [
+    "Washington Park",
+    "Woodlawn",
+    "South Shore"
+  ],
+  "Oakland": [
+    "Douglas",
+    "Kenwood",
+    "Grand Boulevard"
+  ],
+  "Kenwood": [
+    "Oakland",
+    "Hyde Park",
+    "Washington Park",
+    "Grand Boulevard"
+  ],
+  "Hyde Park": [
+    "Kenwood",
+    "Woodlawn",
+    "Washington Park",
+    "Grand Boulevard"
+  ],
+  "Woodland": [
+    "Hyde Park",
+    "South Shore",
+    "Greater Grand Crossing",
+    "Washington Park"
+  ],
+  "South Shore": [
+    "Woodlawn",
+    "Greater Grand Crossing"
+  ],
+
+  "Garfield Ridge": [
+    "Archer Heights",
+    "West Elsdon",
+    "West Lawn",
+    "Clearing"
+  ],
+  "Clearing": [
+    "Garfield Ridge",
+    "West Elsdon",
+    "West Lawn"
+  ],
+  "Archer Heights": [
+    "Brighton Park",
+    "Gage Park",
+    "West Elsdon",
+    "Garfield Ridge"
+  ],
+  "West Elsdon": [
+    "Archer Heights",
+    "Brighton Park",
+    "Gage Park",
+    "Chicago Lawn",
+    "West Lawn",
+    "Clearing",
+    "Garfield Ridge"
+  ],
+  "West Lawn": [
+    "West Elsdon",
+    "Gage Park",
+    "Chicago Lawn",
+    "Clearing",
+    "Garfield Ridge"
+  ],
+  "Brighton Park": [
+    "McKinley Park",
+    "New City",
+    "Gage Park",
+    "West Elsdon",
+    "Archer Heights"
+  ],
+  "Gage Park": [
+    "Brighton Park",
+    "New City",
+    "West Englewood",
+    "Chicago Lawn",
+    "West Lawn",
+    "West Elsdon",
+    "Archer Heights"
+  ],
+  "Chicago Lawn": [
+    "Gage Park",
+    "West Englewood",
+    "West Lawn",
+    "West Elsdon"
+  ],
+  "McKinley Park": [
+    "New City",
+    "Brighton Park"
+  ],
+  "New City": [
+    "McKinley Park",
+    "Englewood",
+    "West Englewood",
+    "Gage Park",
+    "Brighton Park"
+  ],
+  "West Englewood": [
+    "New City",
+    "Englewood",
+    "Chicago Lawn",
+    "Gage Park"
+  ],
+  "Englewood": [
+    "New City",
+    "West Englewood"
+  ],
+
+  "Austin": [
+    "Humboldt Park",
+    "West Garfield Park"
+  ],
+  "Humboldt Park": [
+    "West Town",
+    "Near West Side",
+    "East Garfield Park",
+    "West Garfield Park",
+    "Austin"
+  ],
+  "West Garfield Park": [
+    "Humboldt Park",
+    "East Garfield Park",
+    "North Lawndale",
+    "Austin"
+  ],
+  "East Garfield Park": [
+    "Humboldt Park",
+    "West Town",
+    "Near West Side",
+    "North Lawndale",
+    "West Garfield Park"
+  ],
+  "North Lawndale": [
+    "West Garfield Park",
+    "East Garfield Park",
+    "Near West Side",
+    "Lower West Side",
+    "South Lawndale",
+    "Austin"
+  ],
+  "South Lawndale": [
+    "North Lawndale",
+    "Near West Side",
+    "Lower West Side"
+  ],
+  "West Town": [
+    "Humboldt Park",
+    "East Garfield Park",
+    "Near West Side"
+  ],
+  "Near West Side": [
+    "West Town",
+    "Lower West Side",
+    "South Lawndale",
+    "North Lawndale",
+    "East Garfield Park",
+    "Humboldt Park"
+  ],
+  "Lower West Side": [
+    "Near West Side",
+    "South Lawndale",
+    "North Lawndale"
+  ]
+}

@@ -1,0 +1,19 @@
+%% block diagram cannot be rendered in Markdown PDF, attach it manually
+block-beta
+  columns 1
+
+  block:FarNorthSide
+    columns 4
+    space EdisonPark("Edison Park") ForestGlen("Forest Glen") NorthPark["North Park"]
+    OHare("O'Hare") NorwoodPark("Norwood Park") JeffersonPark("Jefferson Park") AlbanyPark["Albany Park"]
+  end
+
+  block:NorthwestSide
+    columns 4
+    space Dunning PortagePark["Portage Park"] IrvingPark["Irving Park"]
+    space Montclare BelmontCragin["Belmont Cragin"] Hermosa
+  end
+
+  EdisonPark --> NorwoodPark
+  ForestGlen --> NorwoodPark
+  JeffersonPark --> NorwoodPark

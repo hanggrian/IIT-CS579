@@ -1,0 +1,5 @@
+rulebook-pylint
+numpy
+seaborn
+matplotlib
+networkx

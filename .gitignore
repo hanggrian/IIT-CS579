@@ -11,3 +11,5 @@ __pycache__/
 *.egg-info/
 .coverage
 dist/
+
+assignments/hw2/class_entities.json
