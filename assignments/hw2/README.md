@@ -30,7 +30,7 @@ Python.
 [View JSON file](https://github.com/hanggrian/IIT-CS579/blob/main/assignments/hw2/chicago_adjacency.json)
 
 <img
-  width="320"
+  width="320px"
   alt="Diagram 1"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1.svg">
 
@@ -52,7 +52,7 @@ Python.
 >   3.  Plot of degree distribution.
 
 <img
-  width="480"
+  width="480px"
   alt="Figure 1.2"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_2.png">
 
@@ -175,31 +175,31 @@ show()
 > 5.  Plot of degree distribution of unimodal graph.
 
 <img
-  width="320"
+  width="320px"
   alt="Figure 2.3.1"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_1.png">
 <img
-  width="320"
+  width="320px"
   alt="Figure 2.3.2"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_2.png">
 <img
-  width="320"
+  width="320px"
   alt="Figure 2.3.3"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_3.png">
 <img
-  width="320"
+  width="320px"
   alt="Figure 2.3.4"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_4.png">
 <img
-  width="320"
+  width="320px"
   alt="Figure 2.3.5"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_5.png">
 <img
-  width="320"
+  width="320px"
   alt="Figure 2.3.6"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_6.png">
 <img
-  width="320"
+  width="320px"
   alt="Figure 2.3.7"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_7.png">
 
