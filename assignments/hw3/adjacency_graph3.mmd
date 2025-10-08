@@ -11,17 +11,20 @@ flowchart LR
   D((D))
   E((E))
   F((F))
+  G((G))
 
-  A --- B
-  A --- C
-  A --- D
-  A --- F
+  A <--> B
+  A <--> D
 
-  B --- C
-  B --- D
+  B --> D
+  B --> E
 
-  C --- E
+  C --> B
+  C --> D
 
-  D --- F
+  E --> C
+  E --> G
 
-  E --- D
+  F --> E
+  F --> D
+  F <--> G

@@ -33,12 +33,12 @@ $$
 \def\arraystretch{1.5}
 \begin{array}{c|c:c:c:c:c:c}
     & A & B & C & D & E & F \\\\ \hline
-  A & 0 & 2 & 3 & 3 & 0 & 2 \\\\
-  B & 2 & 0 & 1 & 1 & 0 & 0 \\\\
-  C & 3 & 1 & 0 & 0 & 1 & 0 \\\\
-  D & 3 & 1 & 0 & 0 & 1 & 2 \\\\
-  E & 0 & 0 & 1 & 1 & 0 & 0 \\\\
-  F & 2 & 0 & 0 & 2 & 0 & 0
+  A & \infin & 2 & 3 & 3 & \infin & 2 \\\\
+  B & 2 & \infin & 1 & 1 & \infin & \infin \\\\
+  C & 3 & 1 & \infin & \infin & 1 & \infin \\\\
+  D & 3 & 1 & \infin & \infin & 1 & 2 \\\\
+  E & \infin & \infin & 1 & 1 & \infin & \infin \\\\
+  F & 2 & \infin & \infin & 2 & \infin & \infin
 \end{array}
 $$
 
@@ -48,67 +48,66 @@ Then, determine the paths from a node to another and the weights of the paths.
 graph TB
   subgraph F[F &rarr; &mldr;]
     direction LR
-    FF((F)) -- 2 --> FA((A))
-    FF -- 2 --> FD((D))
+    FF((F)) -- 2 --- FA((A))
+    FF -- 2 --- FD((D))
   end
 
   subgraph E[E &rarr; &mldr;]
     direction LR
-    EE((E)) -- 1 --> EC((C))
-    EE -- 1 --> ED((D))
+    EE((E)) -- 1 --- EC((C))
+    EE -- 1 --- ED((D))
   end
 
   subgraph D[D &rarr; &mldr;]
     direction LR
-    DD((D)) -- 3 --> DA((A))
-    DD -- 1 --> DB((B))
-    DD -- 1 --> DE((E))
-    DD -- 2 --> DF((F))
+    DD((D)) -- 3 --- DA((A))
+    DD -- 1 --- DB((B))
+    DD -- 1 --- DE((E))
+    DD -- 2 --- DF((F))
   end
 
   subgraph C[C &rarr; &mldr;]
     direction LR
-    CC((C)) -- 3 --> CA((A))
-    CC -- 1 --> CB((B))
-    CC -- 1 --> CE((E))
+    CC((C)) -- 3 --- CA((A))
+    CC -- 1 --- CB((B))
+    CC -- 1 --- CE((E))
   end
 
   subgraph B[B &rarr; &mldr;]
     direction LR
-    BB((B)) -- 2 --> BA((A))
-    BB -- 1 --> BC((C))
-    BB -- 1 --> BD((D))
+    BB((B)) -- 2 --- BA((A))
+    BB -- 1 --- BC((C))
+    BB -- 1 --- BD((D))
   end
 
   subgraph A[A &rarr; &mldr;]
     direction LR
-    AA((A)) -- 2 --> AB((B))
-    AA -- 3 --> AC((C))
-    AA -- 3 --> AD((D))
-    AA -- 2 --> AF((F))
+    AA((A)) -- 2 --- AB((B))
+    AA -- 3 --- AC((C))
+    AA -- 3 --- AD((D))
+    AA -- 2 --- AF((F))
   end
 ```
 
 Combining all the paths, we have the directed weighted graph.
 
 <img
-  width="640"
+  width="640px"
   alt="Figure 1"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw3/figure1.svg">
 
 > 2.  What is the probability of a node in this graph having degree 3?
 
-There are 2 nodes with degree of 3.
+There are 2 nodes with degree of 3, B and C.
 
 ```mermaid
 graph TB
-  B((B)) -- 2 --> A((A))
-  B -- 1 --> C((C))
-  B -- 1 --> D((D))
+  B((<b>B</b>)) -- 2 --- A((A))
+  B -- 1 --- C((C))
+  B -- 1 --- D((D))
 
-  C((C)) -- 3 --> A((A))
-  C -- 1 --> B((B))
-  C -- 1 --> E((E))
+  C((<b>C</b>)) -- 3 --- A((A))
+  C -- 1 --- E((E))
 ```
 
 Using the formula degree distribution probability formula.
@@ -117,7 +116,7 @@ $$
 \begin{align}
   P(d) &= \frac{n_d}{n} \\\\
   P(3) &= \frac{2}{6} \\\\
-  &= \mathbf{0.33}
+  &= \mathbf{\frac{1}{3}}
 \end{align}
 $$
 
@@ -128,12 +127,12 @@ algorithm.
 
 | | &emsp;&emsp;A&emsp;&emsp; | &emsp;&emsp;B&emsp;&emsp; | &emsp;&emsp;C&emsp;&emsp; | &emsp;&emsp;D&emsp;&emsp; | &emsp;&emsp;E&emsp;&emsp; | &emsp;&emsp;F&emsp;&emsp;
 | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-A | 0 | 2 | 3 | 3 | A &rarr; C &rarr; E<br>A &rarr; D &rarr; E | 2
-B | 2 | 0 | 1 | 1 | B &rarr; C &rarr; E<br>B &rarr; D &rarr; E | B &rarr; D &rarr; F
-C | 3 | 1 | 0 | C &rarr; B &rarr; D<br>C &rarr; E &rarr; D | 1 | C &rarr; A &rarr; F
-D | 3 | 1 | " | 0 | 1 | 2
-E | " | " | 1 | 1 | 0 | E &rarr; D &rarr; F
-F | 2 | " | " | 2 | " | 0
+**A** | | $2$ | $3$ | $3$ | $A \xrightarrow{3} C \xrightarrow{1} E \\\\ A \xrightarrow{3} D \xrightarrow{1} E$ | $2$
+**B** | $2$ | | $1$ | $1$ | $B \xrightarrow{1} C \xrightarrow{1} E \\\\ B \xrightarrow{1} D \xrightarrow{1} E$ | $B \xrightarrow{1} D \xrightarrow{2} F$
+**C** | $3$ | $1$ | | $C \xrightarrow{1} B \xrightarrow{1} D \\\\ C \xrightarrow{1} E \xrightarrow{1} D$ | $1$ | $C \xrightarrow{1} B \xrightarrow{1} D \xrightarrow{2} F$
+**D** | $3$ | $1$ | $"$ | | $1$ | $2$
+**E** | $"$ | $"$ | $1$ | $1$ | | $E \xrightarrow{1} D \xrightarrow{2} F$
+**F** | $2$ | $"$ | $"$ | $2$ | $"$
 
 Having computed the paths, update the weights table.
 
@@ -141,12 +140,12 @@ $$
 \def\arraystretch{1.5}
 \begin{array}{c|c:c:c:c:c:c}
     & A & B & C & D & E & F \\\\ \hline
-  A & 0 & 2 & 3 & 3 & 4 & 2 \\\\
-  B & 2 & 0 & 1 & 1 & 2 & 3 \\\\
-  C & 3 & 1 & 0 & 2 & 1 & 4 \\\\
-  D & 3 & 1 & 2 & 0 & 1 & 2 \\\\
-  E & 4 & 2 & 1 & 1 & 0 & 3 \\\\
-  F & 2 & 3 & 4 & 2 & 3 & 0
+  A & \infin & 2 & 3 & 3 & 4 & 2 \\\\
+  B & 2 & \infin & 1 & 1 & 2 & 3 \\\\
+  C & 3 & 1 & \infin & 2 & 1 & 4 \\\\
+  D & 3 & 1 & 2 & \infin & 1 & 2 \\\\
+  E & 4 & 2 & 1 & 1 & \infin & 3 \\\\
+  F & 2 & 3 & 4 & 2 & 3 & \infin
 \end{array}
 $$
 
@@ -154,8 +153,8 @@ The diameter of a graph is the max shortest path in the table.
 
 $$
 \begin{align}
-  D(G) &= \max(v_i, v_j) \in v \times v^{l_{i, j}} \\\\
-  &= \max(0, 1, 2, 3, 4) \\\\
+  D(G) &= \max(v_i, v_j) \in v \cdot v^{l_{i, j}} \\\\
+  &= \max(1, 2, 3, 4) \\\\
   &= \mathbf{4}
 \end{align}
 $$
@@ -169,18 +168,29 @@ in the shortest paths.
 
 Path | Shortest path | Passing through | Contribution
 --- | --- | --- | ---:
-A &rarr; E | A &rarr; C &rarr; E<br>A &rarr; D &rarr; E | C<br>D | 0.5<br>0.5
+A &rarr; E | A &rarr; C &rarr; E<br>A &rarr; D &rarr; E<br>A &rarr; B &rarr; C &rarr; E<br>A &rarr; B &rarr; D &rarr; E | B<br>C<br>D | 0.5<br>0.5
 B &rarr; E | B &rarr; C &rarr; E<br>B &rarr; D &rarr; E | C<br>D | 0.5<br>0.5
 B &rarr; F | B &rarr; D &rarr; F | D | 1
 C &rarr; D | C &rarr; B &rarr; D<br>C &rarr; E &rarr; D | B<br>E | 0.5<br>0.5
-C &rarr; F | C &rarr; D &rarr; F<br>C &rarr; B &rarr; D &rarr; F<br>C &rarr; E &rarr; D &rarr; F | D<br>B<br>E | 1<br>0.5<br>0.5
+C &rarr; F | C &rarr; B &rarr; D &rarr; F<br>C &rarr; E &rarr; D &rarr; F | D<br>B<br>E | 1<br>0.5<br>0.5
 E &rarr; F | E &rarr; D &rarr; F | D | 1
 
 Having found the intermediate nodes, find the paths passing through them.
 
+| | A | B | C | D | E | F
+--- | --- | --- | --- | --- | --- | ---
+A &rarr; C | - | 0.5 | - | - | - | -
+A &rarr; D | - | 0.5 | - | - | - | -
+A &rarr; E | - | 0.5 | 0.5 | 0.5 | - | -
+B &rarr; E | - | - | 0.5 | 0.5 | - | -
+B &rarr; F | - | - | - | 1 | - | -
+C &rarr; D | - | 0.5 | - | - | 0.5 | -
+C &rarr; F | - | 0.5 | - | 1 | 0.5 | -
+E &rarr; F | - | - | - | 1 | - | -
+
 A | B | C | D | E | F
 --- | --- | --- | --- | --- | ---
-| - | C &rarr; D<br>C &rarr; F | A &rarr; E<br>B &rarr; E | A &rarr; E<br>B &rarr; E<br>B &rarr; F<br>C &rarr; F<br>E &rarr; F | C &rarr; D<br>C &rarr; F | -
+| - | C &rarr; D | A &rarr; E<br>B &rarr; E | A &rarr; E<br>B &rarr; E<br>B &rarr; F<br>C &rarr; F<br>E &rarr; F | C &rarr; D | -
 
 Then, combine the contributions of each path to get the betweenness centrality.
 
@@ -188,14 +198,14 @@ $$
 \begin{align}
   C_b(v_i) &= \sum_{s \neq t \neq v_i} \frac{\sigma_{st}(v_i)}{\sigma_{st}} \\\\
   C_b(A) &&= \mathbf{0} \\\\
-  C_b(B) &= C \to D + C \to F \\\\
-  &= 0.5 + 0.5 &= \mathbf{1} \\\\
-  C_b(C) &= A \to E + B \to E \\\\
-  &= 0.5 + 0.5 &= \mathbf{1} \\\\
-  C_b(D) &= A \to E + B \to E + B \to F + C \to F + E \to F \\\\
-  &= 0.5 + 0.5 + 1 + 1 + 1 &= \mathbf{4} \\\\
-  C_b(E) &= C \to D + C \to F \\\\
-  &= 0.5 + 0.5 &= \mathbf{1} \\\\
+  C_b(B) &= (A \to C + A \to D + A \to E + C \to D + C \to F) \cdot 2 \\\\
+  &= (0.5 + 0.5 + 0.5 + 0.5 + 0.5) \cdot 2 &= \mathbf{5} \\\\
+  C_b(C) &= (A \to E + B \to E) \cdot 2 \\\\
+  &= (0.5 + 0.5) \cdot 2 &= \mathbf{2} \\\\
+  C_b(D) &= (A \to E + B \to E + B \to F + C \to F + E \to F) \cdot 2 \\\\
+  &= (0.5 + 0.5 + 1 + 1 + 1) \cdot 2 &= \mathbf{8} \\\\
+  C_b(E) &= (C \to D + C \to F) \cdot 2 \\\\
+  &= (0.5 + 0.5) \cdot 2 &= \mathbf{2} \\\\
   C_b(F) &&= \mathbf{0}
 \end{align}
 $$
@@ -207,17 +217,17 @@ $$
 \begin{align}
   C_c(v_i) &= \frac{n - 1}{\sum_{v_j \neq v_i} L(v_i, v_j)} \\\\
   C_c(A) &= \frac{5}{L(A, B) + L(A, C) + L(A, D) + L(A, E) + L(A, F)} \\\\
-  &= \frac{5}{2 + 3 + 3 + 4 + 2} &= \mathbf{0.36} \\\\
+  &= \frac{5}{2 + 3 + 3 + 4 + 2} &= \mathbf{\frac{5}{14}} \\\\
   C_c(B) &= \frac{5}{L(B, A) + L(B, C) + L(B, D) + L(B, E) + L(B, F)} \\\\
-  &= \frac{5}{2 + 1 + 1 + 2 + 3} &= \mathbf{0.56} \\\\
+  &= \frac{5}{2 + 1 + 1 + 2 + 3} &= \mathbf{\frac{5}{9}} \\\\
   C_c(C) &= \frac{5}{L(C, A) + L(C, B) + L(C, D) + L(C, E) + L(C, F)} \\\\
-  &= \frac{5}{3 + 1 + 2 + 1 + 4} &= \mathbf{0.45} \\\\
+  &= \frac{5}{3 + 1 + 2 + 1 + 4} &= \mathbf{\frac{5}{11}} \\\\
   C_c(D) &= \frac{5}{L(D, A) + L(D, B) + L(D, C) + L(D, E) + L(D, F)} \\\\
-  &= \frac{5}{3 + 1 + 2 + 1 + 2} &= \mathbf{0.56} \\\\
+  &= \frac{5}{3 + 1 + 2 + 1 + 2} &= \mathbf{\frac{5}{9}} \\\\
   C_c(E) &= \frac{5}{L(E, A) + L(E, B) + L(E, C) + L(E, D) + L(E, F)} \\\\
-  &= \frac{5}{4 + 2 + 1 + 1 + 3} &= \mathbf{0.45} \\\\
+  &= \frac{5}{4 + 2 + 1 + 1 + 3} &= \mathbf{\frac{5}{11}} \\\\
   C_c(F) &= \frac{5}{L(F, A) + L(F, B) + L(F, C) + L(F, D) + L(F, E)} \\\\
-  &= \frac{5}{2 + 3 + 4 + 2 + 3} &= \mathbf{0.36}
+  &= \frac{5}{2 + 3 + 4 + 2 + 3} &= \mathbf{\frac{5}{14}}
 \end{align}
 $$
 
@@ -245,12 +255,12 @@ Combining all the results above, we have the following table.
 
 Node | Betweenness<br>centrality | Closeness<br>centrality | Strength
 --- | ---: | ---: | ---:
-A | 0 | 0.36 | 10
-B | 1 | 0.56 | 4
-C | 1 | 0.45 | 5
-D | 4 | 0.56 | 7
-E | 1 | 0.45 | 2
-F | 0 | 0.36 | 4
+**A** | 0 | 5 / 14 | 10
+**B** | 5 | 5 / 9 | 4
+**C** | 2 | 5 / 11 | 5
+**D** | 8 | 5 / 9 | 7
+**E** | 2 | 5 / 11 | 2
+**F** | 0 | 5 / 14 | 4
 
 ## Problem 2
 
@@ -268,7 +278,7 @@ F | 0 | 0.36 | 4
 > $$
 
 <img
-  width="640"
+  width="640px"
   alt="Figure 2"
   src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw3/figure2.svg">
 
@@ -277,7 +287,7 @@ F | 0 | 0.36 | 4
 First, identify the neighbors of each node. Then, calculate the number of
 connections and check if there is an edge between them.
 
-Node | Neighbor | Neighbor paths | Has edge
+Node | Neighbors | Neighbor paths | Has edge
 --- | --- | --- | :---:
 A | B, C, D, F | B &rarr; C<br>B &rarr; D<br>B &rarr; F<br>C &rarr; D<br>C &rarr; F<br>D &rarr; F | &check;<br>&check;<br>&cross;<br>&cross;<br>&cross;<br>&check;
 B | A, C, D | A &rarr; C<br>A &rarr; D<br>C &rarr; D | &check;<br>&check;<br>&cross;
@@ -293,13 +303,13 @@ $$
 \begin{align}
   C_l(v_i) &= \frac{b_i}{\binom{k}{2}} \\\\
   C_l(A) &= \frac{B \to C + B \to D + D \to F}{6} \\\\
-  &= \frac{1 + 1 + 1}{6} &= \mathbf{0.5} \\\\
+  &= \frac{1 + 1 + 1}{6} &= \frac{1}{2} \\\\
   C_l(B) &= \frac{A \to C + A \to D}{3} \\\\
-  &= \frac{1 + 1}{3} &= \mathbf{0.67} \\\\
+  &= \frac{1 + 1}{3} &= \frac{2}{3} \\\\
   C_l(C) &= \frac{A \to B}{3} \\\\
-  &= \frac{1}{3} &= \mathbf{0.33} \\\\
+  &= \frac{1}{3} &= \frac{1}{3} \\\\
   C_l(D) &= \frac{A \to B + A \to F}{6} \\\\
-  &= \frac{1 + 1}{6} &= \mathbf{0.33} \\\\
+  &= \frac{1 + 1}{6} &= \frac{1}{3} \\\\
   C_l(E) &= \frac{0}{1} &= \mathbf{0} \\\\
   C_l(F) &= \frac{A \to D}{1} \\\\
   &= \frac{1}{1} &= \mathbf{1}
@@ -316,8 +326,11 @@ $$
   C_g(\{A, \ldots, F\}) &= \frac{1}{n} \cdot \sum_{i=1}^{n} C_l(v_i) \\\\
   &= \frac{1}{6} \cdot
     (C_l(A) + C_l(B) + C_l(C) + C_l(D) + C_l(E) + C_l(F)) \\\\
-  &= \frac{1}{6} \cdot (0.5 + 0.67 + 0.33 + 0.33 + 0 + 1) \\\\
-  &= \frac{2.83}{6} &= \mathbf{0.47}
+  &= \frac{1}{6} \cdot
+    \left(\frac{1}{2} + \frac{2}{3} + \frac{1}{3} + \frac{1}{3} + 0 + 1\right) \\\\
+  &= \frac{1}{6} \cdot
+    \left(\frac{3}{6} + \frac{4}{6} + \frac{2}{6} + \frac{2}{6} + 0 + 1\right) \\\\
+  &= \frac{1}{6} \cdot \frac{17}{6} &= \mathbf{\frac{17}{36}}
 \end{align}
 $$
 
@@ -350,23 +363,10 @@ The degree sequence, in descending order, is $\{4, 4, 3, 3, 2, 2\}$.
 
 > Given the following graph:
 >
-> ```mermaid
-> graph LR
->   A <--> B
->   A <--> D
->
->   B --> D
->
->   C --> B
->   C --> D
->
->   E --> C
->   E --> G
->
->   F --> E
->   F --> D
->   F <--> G
-> ```
+> <img
+    width="640px"
+    alt="Figure 3"
+    src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw3/figure3.svg">
 >
 > Using the simple PageRank algorithm from class, iterate until you have a
   stable rank. For each iteration, show the PageRank values and rank for each
@@ -375,31 +375,27 @@ The degree sequence, in descending order, is $\{4, 4, 3, 3, 2, 2\}$.
 Determine the incoming and outgoing edges for each node. The number of degrees
 corresponds to the how many PageRank values in the formula.
 
-Node | Incoming paths | Incoming degree | Outgoing paths | Outgoing degree
---- | --- | ---: | --- | ---:
-A | B &rarr; A<br>D &rarr; A | 2 | A &rarr; B<br>A &rarr; D | 2
-B | A &rarr; B<br>C &rarr; B | 2 | B &rarr; A<br>B &rarr; D | 2
-C | E &rarr; C | 1 | C &rarr; B<br>C &rarr; D | 2
-D | A &rarr; D<br>B &rarr; D<br>C &rarr; D<br>F &rarr; D | 4 | D &rarr; A | 1
-E | F &rarr; E | 1 | E &rarr; C<br>E &rarr; G | 2
-F | G &rarr; F | 1 | F &rarr; E<br>F &rarr; D<br>F &rarr; G | 3
-G | E &rarr; G<br>F &rarr; G | 2 | G &rarr; F | 1
+Node | Outgoing paths | Outgoing degree
+--- | --- | ---:
+A | A &rarr; B<br>A &rarr; D | 2
+B | B &rarr; A<br>B &rarr; D<br>B &rarr; E | 3
+C | C &rarr; B<br>C &rarr; D | 2
+D | D &rarr; A | 1
+E | E &rarr; C<br>E &rarr; G | 2
+F | F &rarr; E<br>F &rarr; D<br>F &rarr; G | 3
+G | G &rarr; F | 1
 
 ### Iteration 0
 
 In the first iteration, all nodes have the value of:
 
 $$
-\begin{align}
-  PR_0(v_i) &= \frac{1}{n} \\\\
-  &= \frac{1}{7} \\\\
-  &= \mathbf{0.14}
-\end{align}
+PR_0(v_i) = \frac{1}{n} = \mathbf{\frac{1}{7}}
 $$
 
 Rank | PageRank | Node
 ---: | ---: | ---
-1 | 0.14 | A<br>B<br>C<br>D<br>E<br>F<br>G
+1 | 1 / 7 | A<br>B<br>C<br>D<br>E<br>F<br>G
 
 ### Iteration 1
 
@@ -408,304 +404,102 @@ For the rest of the iterations, the PageRank value is calculated by:
 $$
 \begin{align}
   PR_i(v_i) &= \sum_{j = 1}^n a_{ji} \frac{PR_j}{L(v_j)} \\\\
-  PR_1(A) &= \frac{PR_0(B)}{L(B)} + \frac{PR_0(D)}{L(D)} \\\\
-  &= \frac{0.14}{2} + \frac{0.14}{1} &= \mathbf{0.21} \\\\
-  PR_1(B) &= \frac{PR_0(A)}{L(A)} + \frac{PR_0(C)}{L(C)} \\\\
-  &= \frac{0.14}{2} + \frac{0.14}{2} &= \mathbf{0.14} \\\\
-  PR_1(C) &= \frac{PR_0(E)}{L(E)} \\\\
-  &= \frac{0.14}{2} &= \mathbf{0.07} \\\\
+  PR_1(A) &=
+    \frac{1}{7} \cdot
+    \left(\frac{PR_0(B)}{L(B)} + \frac{PR_0(D)}{L(D)}\right) \\\\
+  &=
+    \frac{1}{7} \cdot
+    \left(\frac{1}{3} + \frac{1}{1}\right) &= \mathbf{\frac{4}{21}} \\\\
+  PR_1(B) &=
+    \frac{1}{7} \cdot
+    \left(\frac{PR_0(A)}{L(A)} + \frac{PR_0(C)}{L(C)}\right) \\\\
+  &=
+    \frac{1}{7}
+    \cdot \left(\frac{1}{2} + \frac{1}{2}\right) &= \mathbf{\frac{1}{7}} \\\\
+  PR_1(C) &=
+    \frac{1}{7}
+    \cdot \left(\frac{PR_0(E)}{L(E)}\right) \\\\
+  &=
+    \frac{1}{7}
+    \cdot \left(\frac{1}{2}\right) &= \mathbf{\frac{1}{14}} \\\\
   PR_1(D) &=
-    \frac{PR_0(A)}{L(A)} +
+    \frac{1}{7} \cdot
+    \left(\frac{PR_0(A)}{L(A)} +
     \frac{PR_0(B)}{L(B)} +
     \frac{PR_0(C)}{L(C)} +
-    \frac{PR_0(F)}{L(F)} \\\\
+    \frac{PR_0(F)}{L(F)}\right) \\\\
   &=
-    \frac{0.14}{2} +
-    \frac{0.14}{2} +
-    \frac{0.14}{2} +
-    \frac{0.14}{3} &= \mathbf{0.26} \\\\
-  PR_1(E) &= \frac{PR_0(F)}{L(F)} \\\\
-  &= \frac{0.14}{3} &= \mathbf{0.05} \\\\
-  PR_1(F) &= \frac{PR_0(G)}{L(G)} \\\\
-  &= \frac{0.14}{1} &= \mathbf{0.14} \\\\
-  PR_1(G) &= \frac{PR_0(E)}{L(E)} + \frac{PR_0(F)}{L(F)} \\\\
-  &= \frac{0.14}{2} + \frac{0.14}{3} &= \mathbf{0.12}
+    \frac{1}{7} \cdot
+    \left(\frac{1}{2} +
+    \frac{1}{3} +
+    \frac{1}{2} +
+    \frac{1}{3}\right) &= \mathbf{\frac{5}{21}} \\\\
+  PR_1(E) &=
+    \frac{1}{7} \cdot
+    \left(\frac{PR_0(B)}{L(B)} + \frac{PR_0(F)}{L(F)}\right) \\\\
+  &=
+    \frac{1}{7} \cdot
+    \left(\frac{1}{3} + \frac{1}{3}\right) &= \mathbf{\frac{2}{21}} \\\\
+  PR_1(F) &=
+    \frac{1}{7} \cdot
+    \left(\frac{PR_0(G)}{L(G)}\right) \\\\
+  &=
+    \frac{1}{7} \cdot
+    \left(\frac{1}{1}\right) &= \mathbf{\frac{1}{7}} \\\\
+  PR_1(G) &=
+    \frac{1}{7} \cdot
+    \left(\frac{PR_0(E)}{L(E)} + \frac{PR_0(F)}{L(F)}\right) \\\\
+  &=
+    \frac{1}{7} \cdot
+    \left(\frac{1}{2} + \frac{1}{3}\right) &= \mathbf{\frac{5}{42}}
 \end{align}
 $$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.26 | D
-2 | 0.21 | A
-3 | 0.14 | B<br>F
-5 | 0.12 | G
-6 | 0.07 | C
-7 | 0.05 | E
 
 ### Iteration 2
 
 $$
 \begin{align}
-  PR_2(A) &= \frac{0.14}{2} + \frac{0.26}{1} &= \mathbf{0.33} \\\\
-  PR_2(B) &= \frac{0.21}{2} + \frac{0.07}{2} &= \mathbf{0.14} \\\\
-  PR_2(C) &= \frac{0.05}{2} &= \mathbf{0.03} \\\\
+  PR_2(A) &= \frac{1 / 7}{3} + \frac{5 / 21}{1} &= \mathbf{\frac{6}{21}} \\\\
+  PR_2(B) &= \frac{4 / 21}{2} + \frac{1 / 14}{2} &= \mathbf{\frac{11}{84}} \\\\
+  PR_2(C) &= \frac{2 / 21}{2} &= \mathbf{\frac{1}{21}} \\\\
   PR_2(D) &=
-    \frac{0.21}{2} +
-    \frac{0.14}{2} +
-    \frac{0.07}{2} +
-    \frac{0.14}{3} &= \mathbf{0.26} \\\\
-  PR_2(E) &= \frac{0.14}{3} &= \mathbf{0.05} \\\\
-  PR_2(F) &= \frac{0.12}{1} &= \mathbf{0.12} \\\\
-  PR_2(G) &= \frac{0.05}{2} + \frac{0.14}{3} &= \mathbf{0.07}
+    \frac{4 / 21}{2} +
+    \frac{1 / 7}{3} +
+    \frac{1 / 14}{2} +
+    \frac{1 / 7}{3} &= \mathbf{\frac{19}{84}} \\\\
+  PR_2(E) &= \frac{1 / 7}{3} + \frac{1 / 7}{3} &= \mathbf{\frac{2}{21}} \\\\
+  PR_2(F) &= \frac{5 / 42}{1} &= \mathbf{\frac{5}{42}} \\\\
+  PR_2(G) &= \frac{2 / 21}{2} + \frac{1 / 7}{3} &= \mathbf{\frac{2}{21}}
 \end{align}
 $$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.33 | A
-2 | 0.26 | D
-3 | 0.14 | B
-4 | 0.12 | F
-5 | 0.07 | G
-6 | 0.05 | E
-7 | 0.03 | C
 
 ### Iteration 3
 
 $$
 \begin{align}
-  PR_3(A) &= \frac{0.14}{2} + \frac{0.26}{1} &= \mathbf{0.33} \\\\
-  PR_3(B) &= \frac{0.33}{2} + \frac{0.03}{2} &= \mathbf{0.18} \\\\
-  PR_3(C) &= \frac{0.05}{2} &= \mathbf{0.03} \\\\
-  PR_3(D) &=
-    \frac{0.33}{2} +
-    \frac{0.14}{2} +
-    \frac{0.03}{2} +
-    \frac{0.12}{3} &= \mathbf{0.29} \\\\
-  PR_3(E) &= \frac{0.12}{3} &= \mathbf{0.04} \\\\
-  PR_3(F) &= \frac{0.07}{1} &= \mathbf{0.07} \\\\
-  PR_3(G) &= \frac{0.05}{2} + \frac{0.12}{3} &= \mathbf{0.07}
+  PR_2(A) &= \frac{11 / 84}{3} + \frac{19 / 84}{1} &= \mathbf{\frac{17}{63}} \\\\
+  PR_2(B) &= \frac{6 / 21}{2} + \frac{1 / 21}{2} &= \mathbf{\frac{1}{6}} \\\\
+  PR_2(C) &= \frac{2 / 21}{2} &= \mathbf{\frac{1}{21}} \\\\
+  PR_2(D) &=
+    \frac{6 / 21}{2} +
+    \frac{11 / 84}{3} +
+    \frac{1 / 21}{2} +
+    \frac{5 / 42}{3} &= \mathbf{\frac{1}{4}} \\\\
+  PR_2(E) &= \frac{11 / 84}{3} + \frac{5 / 42}{3} &= \mathbf{\frac{1}{12}} \\\\
+  PR_2(F) &= \frac{2 / 21}{1} &= \mathbf{\frac{2}{21}} \\\\
+  PR_2(G) &= \frac{2 / 21}{2} + \frac{5 / 42}{3} &= \mathbf{\frac{11}{126}}
 \end{align}
 $$
 
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.33 | A
-2 | 0.29 | D
-3 | 0.18 | B
-4 | 0.07 | F<br>G
-6 | 0.04 | E
-7 | 0.03 | C
-
-### Iteration 4
-
-$$
-\begin{align}
-  PR_4(A) &= \frac{0.18}{2} + \frac{0.29}{1} &= \mathbf{0.38} \\\\
-  PR_4(B) &= \frac{0.33}{2} + \frac{0.03}{2} &= \mathbf{0.18} \\\\
-  PR_4(C) &= \frac{0.04}{2} &= \mathbf{0.02} \\\\
-  PR_4(D) &=
-    \frac{0.33}{2} +
-    \frac{0.18}{2} +
-    \frac{0.03}{2} +
-    \frac{0.07}{3} &= \mathbf{0.29} \\\\
-  PR_4(E) &= \frac{0.07}{3} &= \mathbf{0.02} \\\\
-  PR_4(F) &= \frac{0.07}{1} &= \mathbf{0.07} \\\\
-  PR_4(G) &= \frac{0.07}{3} + \frac{0.07}{3} &= \mathbf{0.05} \\\\
-\end{align}
-$$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.38 | A
-2 | 0.29 | D
-3 | 0.18 | B
-4 | 0.07 | F
-5 | 0.05 | G
-6 | 0.02 | C<br>E
-
-### Iteration 5
-
-$$
-\begin{align}
-  PR_5(A) &= \frac{0.18}{2} + \frac{0.29}{1} &= \mathbf{0.38} \\\\
-  PR_5(B) &= \frac{0.38}{2} + \frac{0.02}{2} &= \mathbf{0.20} \\\\
-  PR_5(C) &= \frac{0.02}{2} &= \mathbf{0.01} \\\\
-  PR_5(D) &=
-    \frac{0.38}{2} +
-    \frac{0.18}{2} +
-    \frac{0.02}{2} +
-    \frac{0.07}{3} &= \mathbf{0.31} \\\\
-  PR_5(E) &= \frac{0.07}{3} &= \mathbf{0.02} \\\\
-  PR_5(F) &= \frac{0.02}{1} &= \mathbf{0.02} \\\\
-  PR_5(G) &= \frac{0.02}{3} + \frac{0.02}{3} &= \mathbf{0.01}
-\end{align}
-$$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.38 | A
-2 | 0.31 | D
-3 | 0.20 | B
-4 | 0.02 | E<br>F
-6 | 0.01 | C<br>G
-
-### Iteration 6
-
-$$
-\begin{align}
-  PR_6(A) &= \frac{0.20}{2} + \frac{0.31}{1} &= \mathbf{0.41} \\\\
-  PR_6(B) &= \frac{0.38}{2} + \frac{0.01}{2} &= \mathbf{0.20} \\\\
-  PR_6(C) &= \frac{0.02}{2} &= \mathbf{0.01} \\\\
-  PR_6(D) &=
-    \frac{0.38}{2} +
-    \frac{0.20}{2} +
-    \frac{0.01}{2} +
-    \frac{0.02}{3} &= \mathbf{0.30} \\\\
-  PR_6(E) &= \frac{0.02}{3} &= \mathbf{0.01} \\\\
-  PR_6(F) &= \frac{0.01}{1} &= \mathbf{0.01} \\\\
-  PR_6(G) &= \frac{0.02}{3} + \frac{0.01}{3} &= \mathbf{0.01}
-\end{align}
-$$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.41 | A
-2 | 0.30 | D
-3 | 0.20 | B
-4 | 0.01 | C<br>E<br>F<br>G
-
-### Iteration 7
-
-$PR_7(E)$ should have been rounded to 0 in this iteration. However, PageRank
-values cannot be zero to maintain correctness, so keep 0.01 as the lowest value.
-
-$$
-\begin{align}
-  PR_7(A) &= \frac{0.20}{2} + \frac{0.30}{1} &= \mathbf{0.40} \\\\
-  PR_7(B) &= \frac{0.41}{2} + \frac{0.01}{2} &= \mathbf{0.21} \\\\
-  PR_7(C) &= \frac{0.01}{2} &= \mathbf{0.01} \\\\
-  PR_7(D) &=
-    \frac{0.41}{2} +
-    \frac{0.21}{2} +
-    \frac{0.01}{2} +
-    \frac{0.01}{3} &= \mathbf{0.32} \\\\
-  PR_7(E) &= \frac{0.01}{3} &= \mathbf{0.01} \\\\
-  PR_7(F) &= \frac{0.01}{1} &= \mathbf{0.01} \\\\
-  PR_7(G) &= \frac{0.01}{3} + \frac{0.01}{3} &= \mathbf{0.01}
-\end{align}
-$$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.40 | A
-2 | 0.32 | D
-3 | 0.21 | B
-4 | 0.01 | C<br>E<br>F<br>G
-
-### Iteration 8
-
-$$
-\begin{align}
-  PR_8(A) &= \frac{0.21}{2} + \frac{0.32}{1} &= \mathbf{0.43} \\\\
-  PR_8(B) &= \frac{0.40}{2} + \frac{0.01}{2} &= \mathbf{0.21} \\\\
-  PR_8(C) &= \frac{0.01}{2} &= \mathbf{0.01} \\\\
-  PR_8(D) &=
-    \frac{0.40}{2} +
-    \frac{0.21}{2} +
-    \frac{0.01}{2} +
-    \frac{0.01}{3} &= \mathbf{0.31} \\\\
-  PR_8(E) &= \frac{0.01}{3} &= \mathbf{0.01} \\\\
-  PR_8(F) &= \frac{0.01}{1} &= \mathbf{0.01} \\\\
-  PR_8(G) &= \frac{0.01}{3} + \frac{0.01}{3} &= \mathbf{0.01}
-\end{align}
-$$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.43 | A
-2 | 0.31 | D
-3 | 0.21 | B
-4 | 0.01 | C<br>E<br>F<br>G
-
-### Iteration 9
-
-$$
-\begin{align}
-  PR_9(A) &= \frac{0.21}{2} + \frac{0.31}{1} &= \mathbf{0.42} \\\\
-  PR_9(B) &= \frac{0.43}{2} + \frac{0.01}{2} &= \mathbf{0.22} \\\\
-  PR_9(C) &= \frac{0.01}{2} &= \mathbf{0.01} \\\\
-  PR_9(D) &=
-    \frac{0.43}{2} +
-    \frac{0.22}{2} +
-    \frac{0.01}{2} +
-    \frac{0.01}{3} &= \mathbf{0.33} \\\\
-  PR_9(E) &= \frac{0.01}{3} &= \mathbf{0.01} \\\\
-  PR_9(F) &= \frac{0.01}{1} &= \mathbf{0.01} \\\\
-  PR_9(G) &= \frac{0.01}{3} + \frac{0.01}{3} &= \mathbf{0.01}
-\end{align}
-$$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.42 | A
-2 | 0.33 | D
-3 | 0.22 | B
-4 | 0.01 | C<br>E<br>F<br>G
-
-### Iteration 10
-
-$$
-\begin{align}
-  PR_{10}(A) &= \frac{0.22}{2} + \frac{0.33}{1} &= \mathbf{0.44} \\\\
-  PR_{10}(B) &= \frac{0.42}{2} + \frac{0.01}{2} &= \mathbf{0.22} \\\\
-  PR_{10}(C) &= \frac{0.01}{2} &= \mathbf{0.01} \\\\
-  PR_{10}(D) &=
-    \frac{0.42}{2} +
-    \frac{0.22}{2} +
-    \frac{0.01}{2} +
-    \frac{0.01}{3} &= \mathbf{0.33} \\\\
-  PR_{10}(E) &= \frac{0.01}{3} &= \mathbf{0.01} \\\\
-  PR_{10}(F) &= \frac{0.01}{1} &= \mathbf{0.01} \\\\
-  PR_{10}(G) &= \frac{0.01}{3} + \frac{0.01}{3} &= \mathbf{0.01}
-\end{align}
-$$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.44 | A
-2 | 0.33 | D
-3 | 0.22 | B
-4 | 0.01 | C<br>E<br>F<br>G
-
-### Iteration 11
-
-$$
-\begin{align}
-  PR_{11}(A) &= \frac{0.22}{2} + \frac{0.33}{1} &= \mathbf{0.44} \\\\
-  PR_{11}(B) &= \frac{0.44}{2} + \frac{0.01}{2} &= \mathbf{0.23} \\\\
-  PR_{11}(C) &= \frac{0.01}{2} &= \mathbf{0.01} \\\\
-  PR_{11}(D) &=
-    \frac{0.44}{2} +
-    \frac{0.23}{2} +
-    \frac{0.01}{2} +
-    \frac{0.01}{3} &= \mathbf{0.34} \\\\
-  PR_{11}(E) &= \frac{0.01}{3} &= \mathbf{0.01} \\\\
-  PR_{11}(F) &= \frac{0.01}{1} &= \mathbf{0.01} \\\\
-  PR_{11}(G) &= \frac{0.01}{3} + \frac{0.01}{3} &= \mathbf{0.01}
-\end{align}
-$$
-
-Rank | PageRank | Node
----: | ---: | ---
-1 | 0.44 | A
-2 | 0.34 | D
-3 | 0.23 | B
-4 | 0.01 | C<br>E<br>F<br>G
-
-The rank stabilizes after 12 iterations, because the difference of PageRank
-between this iteration and the previous one is no more than 0.01 for all nodes.
-Admittedly, this solution uses a low precision point for simplicity.
+Node | PageRank | Rank
+--- | ---: | ---:
+**A** | 0.26984 | 1
+**B** | 0.16667 | 3
+**C** | 0.04762 | 7
+**D** | 0.25000 | 2
+**E** | 0.08333 | 6
+**F** | 0.09524 | 4
+**G** | 0.08730 | 5
 
 ## Problem 4
 
