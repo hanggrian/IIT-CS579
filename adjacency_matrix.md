@@ -30,11 +30,11 @@ graph LR
 > \def\arraystretch{1.5}
 > \begin{array}{c|c:c:c:c:c:c}
 >     & A & B & C & D & E \\ \hline
->   A & \infin & 5 & \infin & \infin & \infin \\
->   B & 5 & \infin & 7 & 10 & \infin \\
->   C & \infin & 7 & \infin & 3 & \infin \\
->   D & \infin & 10 & 3 & \infin & 6 \\
->   E & \infin & \infin & \infin & 6 & \infin \\
+>   A & \infty & 5 & \infty & \infty & \infty \\
+>   B & 5 & \infty & 7 & 10 & \infty \\
+>   C & \infty & 7 & \infty & 3 & \infty \\
+>   D & \infty & 10 & 3 & \infty & 6 \\
+>   E & \infty & \infty & \infty & 6 & \infty \\
 > \end{array}
 > $$
 
@@ -78,11 +78,11 @@ graph LR
 > \def\arraystretch{1.5}
 > \begin{array}{c|c:c:c:c:c:c}
 >     & A & B & C & D & E \\ \hline
->   A & \infin & 5 & \infin & \infin & \infin \\
->   B & \infin & \infin & 7 & 10 & \infin \\
->   C & \infin & \infin & \infin & 3 & \infin \\
->   D & \infin & \infin & \infin & \infin & 6 \\
->   E & \infin & 2 & \infin & \infin & \infin \\
+>   A & \infty & 5 & \infty & \infty & \infty \\
+>   B & \infty & \infty & 7 & 10 & \infty \\
+>   C & \infty & \infty & \infty & 3 & \infty \\
+>   D & \infty & \infty & \infty & \infty & 6 \\
+>   E & \infty & 2 & \infty & \infty & \infty \\
 > \end{array}
 > $$
 

@@ -33,12 +33,12 @@ $$
 \def\arraystretch{1.5}
 \begin{array}{c|c:c:c:c:c:c}
     & A & B & C & D & E & F \\\\ \hline
-  A & \infin & 2 & 3 & 3 & \infin & 2 \\\\
-  B & 2 & \infin & 1 & 1 & \infin & \infin \\\\
-  C & 3 & 1 & \infin & \infin & 1 & \infin \\\\
-  D & 3 & 1 & \infin & \infin & 1 & 2 \\\\
-  E & \infin & \infin & 1 & 1 & \infin & \infin \\\\
-  F & 2 & \infin & \infin & 2 & \infin & \infin
+  A & \infty & 2 & 3 & 3 & \infty & 2 \\\\
+  B & 2 & \infty & 1 & 1 & \infty & \infty \\\\
+  C & 3 & 1 & \infty & \infty & 1 & \infty \\\\
+  D & 3 & 1 & \infty & \infty & 1 & 2 \\\\
+  E & \infty & \infty & 1 & 1 & \infty & \infty \\\\
+  F & 2 & \infty & \infty & 2 & \infty & \infty
 \end{array}
 $$
 
@@ -140,12 +140,12 @@ $$
 \def\arraystretch{1.5}
 \begin{array}{c|c:c:c:c:c:c}
     & A & B & C & D & E & F \\\\ \hline
-  A & \infin & 2 & 3 & 3 & 4 & 2 \\\\
-  B & 2 & \infin & 1 & 1 & 2 & 3 \\\\
-  C & 3 & 1 & \infin & 2 & 1 & 4 \\\\
-  D & 3 & 1 & 2 & \infin & 1 & 2 \\\\
-  E & 4 & 2 & 1 & 1 & \infin & 3 \\\\
-  F & 2 & 3 & 4 & 2 & 3 & \infin
+  A & \infty & 2 & 3 & 3 & 4 & 2 \\\\
+  B & 2 & \infty & 1 & 1 & 2 & 3 \\\\
+  C & 3 & 1 & \infty & 2 & 1 & 4 \\\\
+  D & 3 & 1 & 2 & \infty & 1 & 2 \\\\
+  E & 4 & 2 & 1 & 1 & \infty & 3 \\\\
+  F & 2 & 3 & 4 & 2 & 3 & \infty
 \end{array}
 $$
 
