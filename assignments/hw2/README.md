@@ -236,7 +236,9 @@ the class participant spreadsheet into a JSON file. I saved the spreadsheet as a
 CSV file so that the chatbot can read it without any formatting. Finally, the
 final result is slightly modified to standardize residence and hobbies.
 
-### AI prompts
+### Prompt 1
+
+![GPT-4o][gpt-4o]
 
 > Convert the input CSV:
 >
@@ -245,7 +247,7 @@ final result is slightly modified to standardize residence and hobbies.
 > ...
 > ```
 >
-> into JSON format in the following format:
+> into a JSON file in the following format:
 >
 > ```json
 > {
@@ -273,3 +275,5 @@ final result is slightly modified to standardize residence and hobbies.
 I’ve converted the CSV into the requested JSON format. You can download it here:
 
 &#x1f4c2; `social_network_data.json`
+
+[gpt-4o]: https://img.shields.io/badge/llm-gpt--4o-74AA9C

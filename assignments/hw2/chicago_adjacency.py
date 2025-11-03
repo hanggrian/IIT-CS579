@@ -1,16 +1,16 @@
 from json import load
 
-from matplotlib.pyplot import figure, title, tight_layout, show
+from matplotlib import pyplot
 from networkx import Graph, spring_layout, draw
 
-from lib import LARGE_FIGURE, LARGE_NODE, SMALL_FONT, check_exists, \
+from _lib import LARGE_FIGURE, LARGE_NODE, SMALL_FONT, check_exists, \
     plot_degree_distribution
 
 INPUT_FILE = 'chicago_adjacency.json'
 
 if __name__ == '__main__':
     check_exists(INPUT_FILE)
-    with open(INPUT_FILE, 'r') as file:
+    with open(INPUT_FILE, 'r', encoding='UTF-8') as file:
         areas = load(file)
 
     # create adjacency graph
@@ -18,8 +18,8 @@ if __name__ == '__main__':
     [graph.add_node(area) for area in areas.keys()]
     for area, neighbors in areas.items():
         [graph.add_edge(area, n) for n in neighbors]
-    figure(figsize=LARGE_FIGURE)
-    title('Chicago community areas adjacency map', fontweight='bold')
+    pyplot.figure(figsize=LARGE_FIGURE)
+    pyplot.suptitle('Chicago community areas adjacency map', fontweight='bold')
     draw(
         graph,
         spring_layout(graph),
@@ -29,8 +29,7 @@ if __name__ == '__main__':
         node_color='lightblue',
         edge_color='gray',
     )
-    tight_layout()
-    show()
+    pyplot.show()
 
     # create degree distribution
     plot_degree_distribution(

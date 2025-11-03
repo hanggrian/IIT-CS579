@@ -1,11 +1,11 @@
 from json import load
 
-from matplotlib.pyplot import figure, title, tight_layout, show, axis
+from matplotlib import pyplot
 from networkx import Graph, spring_layout, bipartite, draw_networkx_nodes, draw_networkx_edges, \
     draw_networkx_labels
 from numpy import linspace
 
-from lib import LARGE_FIGURE, LARGE_NODE, SMALL_NODE, LARGE_FONT, SMALL_FONT, \
+from _lib import LARGE_FIGURE, LARGE_NODE, SMALL_NODE, LARGE_FONT, SMALL_FONT, \
     check_exists, plot_degree_distribution
 
 INPUT_FILE = 'class_entities.json'
@@ -26,7 +26,7 @@ def strip_email_domain(emails):
 
 if __name__ == '__main__':
     check_exists(INPUT_FILE)
-    with open(INPUT_FILE, 'r') as file:
+    with open(INPUT_FILE, 'r', encoding='UTF-8') as file:
         participants = load(file)
 
     for entity_type in [key for key in participants[0].keys() if key != 'email']:
@@ -50,8 +50,11 @@ if __name__ == '__main__':
         bipartite_graph.add_nodes_from(all_entities, bipartite=1)
         for participant, entities in all_participants.items():
             [bipartite_graph.add_edge(participant, entity) for entity in entities]
-        figure(figsize=LARGE_FIGURE)
-        title(f'Class participants bipartite graph: {entity_type.title()}', fontweight='bold')
+        pyplot.figure(figsize=LARGE_FIGURE)
+        pyplot.suptitle(
+            f'Class participants bipartite graph: {entity_type.title()}',
+            fontweight='bold',
+        )
         positions = {}
         for i, participant in enumerate(all_participant_emails):
             positions[participant] = (0, linspace(1, 0, len(all_participant_emails))[i])
@@ -84,14 +87,16 @@ if __name__ == '__main__':
             labels={e: e for e in all_entities},
             font_size=adaptive_font_size(len(all_entities)),
         )
-        axis('off')
-        tight_layout()
-        show()
+        pyplot.axis('off')
+        pyplot.show()
 
         # create unimodal graph
         unimodal_graph = bipartite.projected_graph(bipartite_graph, all_participants)
-        figure(figsize=LARGE_FIGURE)
-        title(f'Class participants unimodal graph: {entity_type.title()}', fontweight='bold')
+        pyplot.figure(figsize=LARGE_FIGURE)
+        pyplot.suptitle(
+            f'Class participants unimodal graph: {entity_type.title()}',
+            fontweight='bold',
+        )
         positions = spring_layout(unimodal_graph, k=3)
         draw_networkx_edges(
             unimodal_graph,
@@ -106,9 +111,8 @@ if __name__ == '__main__':
             node_size=LARGE_NODE,
         )
         draw_networkx_labels(unimodal_graph, positions, strip_email_domain(unimodal_graph.nodes()))
-        axis('off')
-        tight_layout()
-        show()
+        pyplot.axis('off')
+        pyplot.show()
 
         # create degree distribution
         plot_degree_distribution(

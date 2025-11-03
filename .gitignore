@@ -12,4 +12,7 @@ __pycache__/
 .coverage
 dist/
 
+# personal student information
 assignments/hw2/class_entities.json
+# census API key
+assignments/hw4/.env
