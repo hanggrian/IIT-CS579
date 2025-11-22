@@ -246,21 +246,21 @@ Code part | Example (`B19013_001E`) | Meaning
 
 ![Gemini 2.5 Flash][gemini-2.5-flash]
 
-> I can see in the [Table Shells](https://www.census.gov/programs-surveys/acs/technical-documentation/table-shells.html) that `B01001` is total population. But, where does the `_001E1` come from?
+> I can see in the [Table Shells](https://www.census.gov/programs-surveys/acs/technical-documentation/table-shells.html) that `B01001` is total population. But, where does the `_001E` come from?
 
 Here is the breakdown of why B01003 is the correct variable for total
 population, and where that 001E comes from:
 
-1.  Why `B01003` is Total Population:
+1.  Why `B01003` is total population:
 
     The Census Bureau organizes tables by their **Universe** (the population or
     group they measure).
 
-    This table's universe is explicitly Total Population and has only one
+    This table's universe is explicitly total population and has only one
     variable: the total count. It is the designated, most direct, and most
     efficient variable to pull when you only need the total population count for
     a given geography from the ACS.
-1.  Where the `_001E` Comes From
+1.  Where the `_001E` comes from
 
     The suffix `_001E` is standard structure across almost all ACS tables and
     indicates the following:
@@ -308,11 +308,11 @@ threshold = np.percentile(dist_matrix.flatten(), 20)
 G = nx.Graph()
 n = len(scaled)
 for i in range(n):
-    G.add_node(i, label=labels[i], is_montclare=is_montclare[i])
+  G.add_node(i, label=labels[i], is_montclare=is_montclare[i])
 for i in range(n):
-    for j in range(i + 1, n):
-        if dist_matrix[i, j] < threshold:
-            G.add_edge(i, j)
+  for j in range(i + 1, n):
+    if dist_matrix[i, j] < threshold:
+      G.add_edge(i, j)
 ```
 
 - `cdist`: Efficient $O(n^2)$ distance computation

@@ -1,0 +1,6 @@
+# lint
+pylint==3.2.5
+rulebook-pylint==0.1
+regex
+# main
+colorama

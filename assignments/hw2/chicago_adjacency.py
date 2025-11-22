@@ -1,4 +1,5 @@
 from json import load
+from types import SimpleNamespace
 
 from matplotlib import pyplot
 from networkx import Graph, spring_layout, draw
@@ -11,13 +12,13 @@ INPUT_FILE = 'chicago_adjacency.json'
 if __name__ == '__main__':
     check_exists(INPUT_FILE)
     with open(INPUT_FILE, 'r', encoding='UTF-8') as file:
-        areas = load(file)
+        areas = load(file, object_hook=lambda d: SimpleNamespace(**d))
 
     # create adjacency graph
     graph = Graph()
-    [graph.add_node(area) for area in areas.keys()]
-    for area, neighbors in areas.items():
-        [graph.add_edge(area, n) for n in neighbors]
+    for area in areas:
+        graph.add_node(area.area)
+        [graph.add_edge(area.area, n) for n in area.neighbors]
     pyplot.figure(figsize=LARGE_FIGURE)
     pyplot.suptitle('Chicago community areas adjacency map', fontweight='bold')
     draw(
