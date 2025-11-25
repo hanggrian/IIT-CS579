@@ -91,10 +91,29 @@ graph TB
 
 Combining all the paths, we have the directed weighted graph.
 
-<img
-  width="640px"
-  alt="Figure 1"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw3/figure1.svg">
+```mermaid
+graph LR
+  A((A))
+  B((B))
+  C((C))
+  D((D))
+  E((E))
+  F((F))
+
+  A -- 2 --- B
+  A -- 3 --- C
+  A -- 3 --- D
+  A -- 2 --- F
+
+  B -- 1 --- C
+  B -- 1 --- D
+
+  C -- 1 --- E
+
+  D -- 1 --- E
+
+  F -- 2 --- D
+```
 
 > 2.  What is the probability of a node in this graph having degree 3?
 
@@ -115,8 +134,7 @@ Using the formula degree distribution probability formula.
 $$
 \begin{align}
   P(d) &= \frac{n_d}{n} \\\\
-  P(3) &= \frac{2}{6} \\\\
-  &= \mathbf{\frac{1}{3}}
+  P(3) &= \frac{2}{6} &= \mathbf{\frac{1}{3}}
 \end{align}
 $$
 
@@ -154,8 +172,7 @@ The diameter of a graph is the max shortest path in the table.
 $$
 \begin{align}
   D(G) &= \max(v_i, v_j) \in v \cdot v^{l_{i, j}} \\\\
-  &= \max(1, 2, 3, 4) \\\\
-  &= \mathbf{4}
+  &= \max(1, 2, 3, 4) &= \mathbf{4}
 \end{align}
 $$
 
@@ -177,7 +194,7 @@ E &rarr; F | E &rarr; D &rarr; F | D | 1
 
 Having found the intermediate nodes, find the paths passing through them.
 
-| | A | B | C | D | E | F
+Path | A | B | C | D | E | F
 --- | --- | --- | --- | --- | --- | ---
 A &rarr; C | - | 0.5 | - | - | - | -
 A &rarr; D | - | 0.5 | - | - | - | -
@@ -255,12 +272,12 @@ Combining all the results above, we have the following table.
 
 Node | Betweenness<br>centrality | Closeness<br>centrality | Strength
 --- | ---: | ---: | ---:
-**A** | 0 | 5 / 14 | 10
-**B** | 5 | 5 / 9 | 4
-**C** | 2 | 5 / 11 | 5
-**D** | 8 | 5 / 9 | 7
-**E** | 2 | 5 / 11 | 2
-**F** | 0 | 5 / 14 | 4
+A | 0 | 5/14 | 10
+B | 5 | 5/9 | 4
+C | 2 | 5/11 | 5
+D | 8 | 5/9 | 7
+E | 2 | 5/11 | 2
+F | 0 | 5/14 | 4
 
 ## Problem 2
 
@@ -277,10 +294,29 @@ Node | Betweenness<br>centrality | Closeness<br>centrality | Strength
 > \end{bmatrix}
 > $$
 
-<img
-  width="640px"
-  alt="Figure 2"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw3/figure2.svg">
+```mermaid
+graph LR
+  A((A))
+  B((B))
+  C((C))
+  D((D))
+  E((E))
+  F((F))
+
+  A --- B
+  A --- C
+  A --- D
+  A --- F
+
+  B --- C
+  B --- D
+
+  C --- E
+
+  D --- F
+
+  E --- D
+```
 
 > 1.  Provide the local clustering coefficient for each node.
 
@@ -323,13 +359,17 @@ coefficients.
 
 $$
 \begin{align}
-  C_g(\{A, \ldots, F\}) &= \frac{1}{n} \cdot \sum_{i=1}^{n} C_l(v_i) \\\\
+  C_g(\lbrace A, \ldots, F \rbrace) &= \frac{1}{n} \cdot \sum_{i=1}^{n} C_l(v_i) \\\\
   &= \frac{1}{6} \cdot
     (C_l(A) + C_l(B) + C_l(C) + C_l(D) + C_l(E) + C_l(F)) \\\\
   &= \frac{1}{6} \cdot
-    \left(\frac{1}{2} + \frac{2}{3} + \frac{1}{3} + \frac{1}{3} + 0 + 1\right) \\\\
+    \left(
+      \frac{1}{2} + \frac{2}{3} + \frac{1}{3} + \frac{1}{3} + 0 + 1
+    \right) \\\\
   &= \frac{1}{6} \cdot
-    \left(\frac{3}{6} + \frac{4}{6} + \frac{2}{6} + \frac{2}{6} + 0 + 1\right) \\\\
+    \left(
+      \frac{3}{6} + \frac{4}{6} + \frac{2}{6} + \frac{2}{6} + 0 + 1
+    \right) \\\\
   &= \frac{1}{6} \cdot \frac{17}{6} &= \mathbf{\frac{17}{36}}
 \end{align}
 $$
@@ -357,16 +397,38 @@ $$
 \end{Bmatrix}
 $$
 
-The degree sequence, in descending order, is $\{4, 4, 3, 3, 2, 2\}$.
+The degree sequence, in descending order, is $\lbrace 4, 4, 3, 3, 2, 2 \rbrace$.
 
 ## Problem 3
 
 > Given the following graph:
 >
-> <img
-    width="640px"
-    alt="Figure 3"
-    src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw3/figure3.svg">
+> ```mermaid
+> graph LR
+>   A((A))
+>   B((B))
+>   C((C))
+>   D((D))
+>   E((E))
+>   F((F))
+>   G((G))
+>
+>   A <--> B
+>   A <--> D
+>
+>   B --> D
+>   B --> E
+>
+>   C --> B
+>   C --> D
+>
+>   E --> C
+>   E --> G
+>
+>   F --> E
+>   F --> D
+>   F <--> G
+> ```
 >
 > Using the simple PageRank algorithm from class, iterate until you have a
   stable rank. For each iteration, show the PageRank values and rank for each
@@ -477,7 +539,8 @@ $$
 
 $$
 \begin{align}
-  PR_2(A) &= \frac{11 / 84}{3} + \frac{19 / 84}{1} &= \mathbf{\frac{17}{63}} \\\\
+  PR_2(A) &=
+    \frac{11 / 84}{3} + \frac{19 / 84}{1} &= \mathbf{\frac{17}{63}} \\\\
   PR_2(B) &= \frac{6 / 21}{2} + \frac{1 / 21}{2} &= \mathbf{\frac{1}{6}} \\\\
   PR_2(C) &= \frac{2 / 21}{2} &= \mathbf{\frac{1}{21}} \\\\
   PR_2(D) &=
@@ -493,13 +556,13 @@ $$
 
 Node | PageRank | Rank
 --- | ---: | ---:
-**A** | 0.26984 | 1
-**B** | 0.16667 | 3
-**C** | 0.04762 | 7
-**D** | 0.25000 | 2
-**E** | 0.08333 | 6
-**F** | 0.09524 | 4
-**G** | 0.08730 | 5
+A | 0.26984 | 1
+B | 0.16667 | 3
+C | 0.04762 | 7
+D | 0.25000 | 2
+E | 0.08333 | 6
+F | 0.09524 | 4
+G | 0.08730 | 5
 
 ## Problem 4
 
@@ -565,8 +628,7 @@ graph LR
     \begin{align}
       P_1 &= v_2 \to v_4 \to v_5 \\\\
       B_1 &= \min(C(v_2, v_4), C(v_4, v_5)) \\\\
-      &= \min(7, 4) \\\\
-      &= \mathbf{4}
+      &= \min(7, 4) &= \mathbf{4}
     \end{align}
     $$
 1.  Resulting flow network
@@ -595,12 +657,12 @@ graph LR
 
       v2 -- 0/3 --> v1
       v2 -- 0/4 --> v3
-      v2 -- <b>4/7</b> --> v4
+      v2 == 4/7 ==> v4
 
       v3 -- 0/3 --> v4
       v3 -- 0/2 --> v6
 
-      v4 -- <b>4/4</b> --> v5
+      v4 == 4/4 ==> v5
 
       v6 -- 0/8 --> v4
       v6 -- 0/7 --> v5
@@ -634,14 +696,14 @@ graph LR
 
       v2 -- 3 --> v1
       v2 -- 4 --> v3
-      v2 -- <b>3</b> --> v4
+      v2 == 3 ==> v4
 
       v3 -- 3 --> v4
       v3 -- 2 --> v6
 
-      v4 -- <b>4</b> --> v2
+      v4 == 4 ==> v2
 
-      v5 -- <b>4</b> --> v4
+      v5 == 4 ==> v4
 
       v6 -- 8 --> v4
       v6 -- 7 --> v5
@@ -694,16 +756,16 @@ graph LR
       v1 -- 0/6 --> v4
 
       v2 -- 0/3 --> v1
-      v2 -- <b>2/4</b> --> v3
+      v2 == 2/4 ==> v3
       v2 -- 4/7 --> v4
 
       v3 -- 0/3 --> v4
-      v3 -- <b>2/2</b> --> v6
+      v3 == 2/2 ==> v6
 
       v4 -- 4/4 --> v5
 
       v6 -- 0/8 --> v4
-      v6 -- <b>2/7</b> --> v5
+      v6 == 2/7 ==> v5
     ```
 1.  Residual network
 
@@ -733,28 +795,27 @@ graph LR
       v1 -- 6 --> v4
 
       v2 -- 3 --> v1
-      v2 -- <b>2</b> --> v3
+      v2 == 2 ==> v3
       v2 -- 3 --> v4
 
-      v3 -- <b>2</b> --> v2
+      v3 == 2 ==> v2
       v3 -- 3 --> v4
 
       v4 -- 4 --> v2
 
       v5 -- 4 --> v4
-      v5 -- <b>2</b> --> v6
+      v5 == 2 ==> v6
 
-      v6 -- <b>2</b> --> v3
+      v6 == 2 ==> v3
       v6 -- 8 --> v4
-      v6 -- <b>5</b> --> v5
+      v6 == 5 ==> v5
     ```
 1.  Flow value
 
     $$
     \begin{align}
       F_2 &= f(v_2, v_1) + f(v_2, v_3) + f(v_2, v_4) \\\\
-      &= 0 + 2 + 4 \\\\
-      &= \mathbf{6}
+      &= 0 + 2 + 4 &= \mathbf{6}
     \end{align}
     $$
 
