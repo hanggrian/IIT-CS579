@@ -112,12 +112,12 @@ ranging from income, race, transportation to education level:
 
 <img
   width="640px"
-  alt="Figure 1.1"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/figure1_1.svg">
+  alt="Diagram 1.1"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/diagram1_1.svg">
 <img
   width="640px"
-  alt="Figure 1.2"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/figure1_2.svg">
+  alt="Diagram 1.2"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/diagram1_2.svg">
 
 ## Problem 3
 
@@ -145,8 +145,8 @@ home market values, labor force participation and spoken language.
 
 <img
   width="640px"
-  alt="Figure 2.1"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/figure2_1.svg">
+  alt="Diagram 2.1"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/diagram2_1.svg">
 
 > 2.  You will provide data-based arguments including visualizations to support
       why your CA is a community.
@@ -159,8 +159,8 @@ variables.
 
 <img
   width="640px"
-  alt="Figure 2.2"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/figure2_2.svg">
+  alt="Diagram 2.2"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/diagram2_2.svg">
 
 The table data can also be drawn as a network graph, where nodes that share
 similar socioeconomic characteristics are connected by undirected edges.
@@ -169,8 +169,8 @@ external nodes.
 
 <img
   width="640px"
-  alt="Figure 2.3"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/figure2_3.svg">
+  alt="Diagram 2.3"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/diagram2_3.svg">
 
 > 3.  You will provide data-based arguments including visualizations to support
       why your CA is not a community.
@@ -189,8 +189,8 @@ current area range does not reflect socioeconomic divisions.
 
 <img
   width="640px"
-  alt="Figure 2.4"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/figure2_4.svg">
+  alt="Diagram 2.4"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/diagram2_4.svg">
 
 > 4.  You will provide a proposal for alternative community(ies). If your CA has
       60 or more block groups, this will be a proposal for organizations of
@@ -209,8 +209,8 @@ socioeconomic pattern and still has a considerably low amount of block groups.
 
 <img
   width="640px"
-  alt="Figure 2.5"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/figure2_5.svg">
+  alt="Diagram 2.5"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw4/diagram2_5.svg">
 
 ## Problem 4
 

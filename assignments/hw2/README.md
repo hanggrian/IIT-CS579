@@ -31,30 +31,30 @@ Python.
 
 <img
   width="320px"
-  alt="Diagram 1"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1.svg">
+  alt="Figure 1"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1.svg">
 
 >   2.  Labelled visualization of network created.
 
 | | |
 --- | ---
 **Central** | **Far North Side**
-![Figure 1.1.1](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_1_1.png) | ![Figure 1.1.2](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_1_2.png)
+![Figure 1.1.1](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_1_1.png) | ![Figure 1.1.2](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_1_2.png)
 **Far Southeast Side** | **Far Southwest Side**
-![Figure 1.1.3](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_1_3.png) | ![Figure 1.1.4](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_1_4.png)
+![Figure 1.1.3](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_1_3.png) | ![Figure 1.1.4](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_1_4.png)
 **North Side** | **Northwest Side**
-![Figure 1.1.5](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_1_5.png) | ![Figure 1.1.6](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_1_6.png)
+![Figure 1.1.5](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_1_5.png) | ![Figure 1.1.6](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_1_6.png)
 **South Side** | **Southwest Side**
-![Figure 1.1.7](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_1_7.png) | ![Figure 1.1.8](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_1_8.png)
+![Figure 1.1.7](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_1_7.png) | ![Figure 1.1.8](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_1_8.png)
 **West Side** |
-![Figure 1.1.9](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_1_9.png) |
+![Figure 1.1.9](https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_1_9.png) |
 
 >   3.  Plot of degree distribution.
 
 <img
   width="480px"
-  alt="Figure 1.2"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure1_2.png">
+  alt="Diagram 1.2"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram1_2.png">
 
 ## Problem 2
 
@@ -82,32 +82,32 @@ is deliberately not tracked in Git repository for privacy concern.
 
 <img
   width="100%"
-  alt="Figure 2.1.1"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_1_1.png">
+  alt="Diagram 2.1.1"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_1_1.png">
 <img
   width="100%"
-  alt="Figure 2.1.2"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_1_2.png">
+  alt="Diagram 2.1.2"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_1_2.png">
 <img
   width="100%"
-  alt="Figure 2.1.3"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_1_3.png">
+  alt="Diagram 2.1.3"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_1_3.png">
 <img
   width="100%"
-  alt="Figure 2.1.4"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_1_4.png">
+  alt="Diagram 2.1.4"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_1_4.png">
 <img
   width="100%"
-  alt="Figure 2.1.5"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_1_5.png">
+  alt="Diagram 2.1.5"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_1_5.png">
 <img
   width="100%"
-  alt="Figure 2.1.6"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_1_6.png">
+  alt="Diagram 2.1.6"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_1_6.png">
 <img
   width="100%"
-  alt="Figure 2.1.7"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_1_7.png">
+  alt="Diagram 2.1.7"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_1_7.png">
 
 > 3.  Description of method for projecting bipartite graph to unimodal graph
       including code.
@@ -145,63 +145,63 @@ show()
 
 <img
   width="100%"
-  alt="Figure 2.2.1"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_2_1.png">
+  alt="Diagram 2.2.1"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_2_1.png">
 <img
   width="100%"
-  alt="Figure 2.2.2"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_2_2.png">
+  alt="Diagram 2.2.2"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_2_2.png">
 <img
   width="100%"
-  alt="Figure 2.2.3"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_2_3.png">
+  alt="Diagram 2.2.3"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_2_3.png">
 <img
   width="100%"
-  alt="Figure 2.2.4"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_2_4.png">
+  alt="Diagram 2.2.4"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_2_4.png">
 <img
   width="100%"
-  alt="Figure 2.2.5"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_2_5.png">
+  alt="Diagram 2.2.5"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_2_5.png">
 <img
   width="100%"
-  alt="Figure 2.2.6"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_2_6.png">
+  alt="Diagram 2.2.6"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_2_6.png">
 <img
   width="100%"
-  alt="Figure 2.2.7"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_2_7.png">
+  alt="Diagram 2.2.7"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_2_7.png">
 
 > 5.  Plot of degree distribution of unimodal graph.
 
 <img
   width="320px"
-  alt="Figure 2.3.1"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_1.png">
+  alt="Diagram 2.3.1"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_3_1.png">
 <img
   width="320px"
-  alt="Figure 2.3.2"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_2.png">
+  alt="Diagram 2.3.2"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_3_2.png">
 <img
   width="320px"
-  alt="Figure 2.3.3"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_3.png">
+  alt="Diagram 2.3.3"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_3_3.png">
 <img
   width="320px"
-  alt="Figure 2.3.4"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_4.png">
+  alt="Diagram 2.3.4"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_3_4.png">
 <img
   width="320px"
-  alt="Figure 2.3.5"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_5.png">
+  alt="Diagram 2.3.5"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_3_5.png">
 <img
   width="320px"
-  alt="Figure 2.3.6"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_6.png">
+  alt="Diagram 2.3.6"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_3_6.png">
 <img
   width="320px"
-  alt="Figure 2.3.7"
-  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/figure2_3_7.png">
+  alt="Diagram 2.3.7"
+  src="https://github.com/hanggrian/IIT-CS579/raw/assets/assignments/hw2/diagram2_3_7.png">
 
 ## Problem 3
 
