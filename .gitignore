@@ -12,6 +12,9 @@ __pycache__/
 .coverage
 dist/
 
+# Jupyter
+.ipynb_checkpoints/
+
 # personal student information
 assignments/hw2/class_entities.json
 # census API key
