@@ -1,0 +1,976 @@
+[
+  {
+    "area": "Rogers Park",
+    "stations": [
+      {
+        "station": "Loyola",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Jarvis",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Morse",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Howard",
+        "lines": ["Red", "Yellow", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "West Ridge",
+    "stations": []
+  },
+  {
+    "area": "Uptown",
+    "stations": [
+      {
+        "station": "Argyle",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Wilson",
+        "lines": ["Purple", "Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Lawrence",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Lincoln Square",
+    "stations": [
+      {
+        "station": "Rockwell",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Montrose-Ravenswood",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Western-Ravenswood",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Damen-Ravenswood",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "North Center",
+    "stations": [
+      {
+        "station": "Addison-Ravenswood",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Irving Park-Ravenswood",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Lake View",
+    "stations": [
+      {
+        "station": "Addison-North Main",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Southport",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Diversey",
+        "lines": ["Brown", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Wellington",
+        "lines": ["Brown", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Sheridan",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Belmont-North Main",
+        "lines": ["Red", "Brown", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Paulina",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Lincoln Park",
+    "stations": [
+      {
+        "station": "Armitage",
+        "lines": ["Brown", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Fullerton",
+        "lines": ["Red", "Brown", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Near North Side",
+    "stations": [
+      {
+        "station": "North/Clybourn",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Merchandise Mart",
+        "lines": ["Brown", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Chicago/State",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Sedgwick",
+        "lines": ["Brown", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Clark/Division",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Chicago/Franklin",
+        "lines": ["Brown", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Grand/State",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Edison Park",
+    "stations": []
+  },
+  {
+    "area": "Norwood Park",
+    "stations": [
+      {
+        "station": "Harlem-O'Hare",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Jefferson Park",
+    "stations": [
+      {
+        "station": "Jefferson Park",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Forest Glen",
+    "stations": []
+  },
+  {
+    "area": "North Park",
+    "stations": []
+  },
+  {
+    "area": "Albany Park",
+    "stations": [
+      {
+        "station": "Francisco",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Kedzie-Ravenswood",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Kimball",
+        "lines": ["Brown"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Portage Park",
+    "stations": []
+  },
+  {
+    "area": "Irving Park",
+    "stations": [
+      {
+        "station": "Montrose-O'Hare",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Irving Park-O'Hare",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Addison-O'Hare",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Dunning",
+    "stations": []
+  },
+  {
+    "area": "Montclare",
+    "stations": []
+  },
+  {
+    "area": "Belmont Cragin",
+    "stations": []
+  },
+  {
+    "area": "Hermosa",
+    "stations": []
+  },
+  {
+    "area": "Avondale",
+    "stations": [
+      {
+        "station": "Belmont-O'Hare",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Logan Square",
+    "stations": [
+      {
+        "station": "Logan Square",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Western/Milwaukee",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "California/Milwaukee",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Humboldt Park",
+    "stations": []
+  },
+  {
+    "area": "West Town",
+    "stations": [
+      {
+        "station": "Grand/Milwaukee",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Chicago/Milwaukee",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Damen/Milwaukee",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Division/Milwaukee",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Austin",
+    "stations": [
+      {
+        "station": "Cicero-Congress",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Laramie",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Austin-Lake",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Central-Lake",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Cicero-Lake",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "West Garfield Park",
+    "stations": [
+      {
+        "station": "Pulaski-Congress",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Pulaski-Lake",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "East Garfield Park",
+    "stations": [
+      {
+        "station": "Kedzie-Lake",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Kedzie-Homan",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "California-Lake",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Conservatory-Central Park",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Near West Side",
+    "stations": [
+      {
+        "station": "Morgan",
+        "lines": ["Green", "Pink"],
+        "years": [2020, 2024]
+      },
+      {
+        "station": "Racine",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Polk",
+        "lines": ["Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Damen-Lake",
+        "lines": ["Green"],
+        "years": [2024]
+      },
+      {
+        "station": "UIC-Halsted",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Illinois Medical District",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Ashland-Lake",
+        "lines": ["Green", "Pink"]
+      },
+      {
+        "station": "Western-Congress",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Clinton-Congress",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Clinton-Lake",
+        "lines": ["Green", "Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "North Lawndale",
+    "stations": [
+      {
+        "station": "Central Park",
+        "lines": ["Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Pulaski-Douglas",
+        "lines": ["Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Kedzie-Douglas",
+        "lines": ["Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Kostner",
+        "lines": ["Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "South Lawndale",
+    "stations": [
+      {
+        "station": "California-Douglas",
+        "lines": ["Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Lower West Side",
+    "stations": [
+      {
+        "station": "18th",
+        "lines": ["Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Ashland-Midway",
+        "lines": ["Orange"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Western-Douglas",
+        "lines": ["Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Damen",
+        "lines": ["Pink"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Loop",
+    "stations": [
+      {
+        "station": "Washington/Wabash",
+        "lines": ["Brown", "Orange", "Pink", "Purple", "Green"],
+        "years": [2020, 2024]
+      },
+      {
+        "station": "LaSalle",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Clark/Lake",
+        "lines": ["Brown", "Orange", "Pink", "Purple", "Green", "Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Lake/State",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Washington/Wells",
+        "lines": ["Brown", "Orange", "Pink", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Quincy/Wells",
+        "lines": ["Brown", "Orange", "Pink", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Library",
+        "lines": ["Brown", "Orange", "Pink", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Harrison",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Monroe/Dearborn",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Washington/Dearborn",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Adams/Wabash",
+        "lines": ["Brown", "Orange", "Pink", "Purple", "Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "LaSalle/Van Buren",
+        "lines": ["Brown", "Orange", "Pink", "Purple"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Monroe/State",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "State/Lake",
+        "lines": ["Brown", "Orange", "Pink", "Purple", "Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Jackson/Dearborn",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Jackson/State",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Near South Side",
+    "stations": [
+      {
+        "station": "Roosevelt/Wabash",
+        "lines": ["Orange", "Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Roosevelt/State",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Cermak-McCormick Place",
+        "lines": ["Green"],
+        "years": [2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Armour Square",
+    "stations": [
+      {
+        "station": "Cermak-Chinatown",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Sox-35th-Dan Ryan",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Douglas",
+    "stations": [
+      {
+        "station": "35-Bronzeville-IIT",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Oakland",
+    "stations": []
+  },
+  {
+    "area": "Fuller Park",
+    "stations": [
+      {
+        "station": "Garfield-Dan Ryan",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "47th-Dan Ryan",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Grand Boulevard",
+    "stations": [
+      {
+        "station": "Indiana",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "51st",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "47th-South Elevated",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "43rd",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Kenwood",
+    "stations": []
+  },
+  {
+    "area": "Washington Park",
+    "stations": [
+      {
+        "station": "Garfield-South Elevated",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Hyde Park",
+    "stations": []
+  },
+  {
+    "area": "Woodlawn",
+    "stations": [
+      {
+        "station": "King Drive",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Cottage Grove",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "South Shore",
+    "stations": []
+  },
+  {
+    "area": "Chatham",
+    "stations": [
+      {
+        "station": "79th",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "87th",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Avalon Park",
+    "stations": []
+  },
+  {
+    "area": "South Chicago",
+    "stations": []
+  },
+  {
+    "area": "Burnside",
+    "stations": []
+  },
+  {
+    "area": "Calumet Heights",
+    "stations": []
+  },
+  {
+    "area": "Roseland",
+    "stations": [
+      {
+        "station": "95th/Dan Ryan",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Pullman",
+    "stations": []
+  },
+  {
+    "area": "South Deering",
+    "stations": []
+  },
+  {
+    "area": "East Side",
+    "stations": []
+  },
+  {
+    "area": "West Pullman",
+    "stations": []
+  },
+  {
+    "area": "Riverdale",
+    "stations": []
+  },
+  {
+    "area": "Hegewisch",
+    "stations": []
+  },
+  {
+    "area": "Garfield Ridge",
+    "stations": [
+      {
+        "station": "Midway Airport",
+        "lines": ["Orange"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Archer Heights",
+    "stations": [
+      {
+        "station": "Pulaski-Midway",
+        "lines": ["Orange"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Brighton Park",
+    "stations": [
+      {
+        "station": "Kedzie-Midway",
+        "lines": ["Orange"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "McKinley Park",
+    "stations": [
+      {
+        "station": "35th/Archer",
+        "lines": ["Orange"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Bridgeport",
+    "stations": [
+      {
+        "station": "Halsted-Midway",
+        "lines": ["Orange"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "New City",
+    "stations": []
+  },
+  {
+    "area": "West Elsdon",
+    "stations": []
+  },
+  {
+    "area": "Gage Park",
+    "stations": [
+      {
+        "station": "Western-Midway",
+        "lines": ["Orange"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Clearing",
+    "stations": []
+  },
+  {
+    "area": "West Lawn",
+    "stations": []
+  },
+  {
+    "area": "Chicago Lawn",
+    "stations": []
+  },
+  {
+    "area": "West Englewood",
+    "stations": [
+      {
+        "station": "Ashland/63rd",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Englewood",
+    "stations": [
+      {
+        "station": "63rd-Dan Ryan",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Halsted/63rd",
+        "lines": ["Green"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Greater Grand Crossing",
+    "stations": [
+      {
+        "station": "69th",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Ashburn",
+    "stations": []
+  },
+  {
+    "area": "Auburn Gresham",
+    "stations": []
+  },
+  {
+    "area": "Beverly",
+    "stations": []
+  },
+  {
+    "area": "Washington Heights",
+    "stations": []
+  },
+  {
+    "area": "Mount Greenwood",
+    "stations": []
+  },
+  {
+    "area": "Morgan Park",
+    "stations": []
+  },
+  {
+    "area": "O'Hare",
+    "stations": [
+      {
+        "station": "Cumberland",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "O'Hare Airport",
+        "lines": ["Blue"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  },
+  {
+    "area": "Edgewater",
+    "stations": [
+      {
+        "station": "Berwyn",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Thorndale",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Bryn Mawr",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      },
+      {
+        "station": "Granville",
+        "lines": ["Red"],
+        "years": [2000, 2010, 2020, 2024]
+      }
+    ]
+  }
+]

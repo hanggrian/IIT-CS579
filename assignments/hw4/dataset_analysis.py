@@ -15,7 +15,7 @@ class Dimension:
     TWO = 'dim2'
 
 
-def print_plot(title):
+def print_title(title):
     print(f'Plotting {title}...')
     return title
 
@@ -33,7 +33,7 @@ def show_tight():
 if __name__ == '__main__':
     tract_frame = read_csv(TRACTS_FILE)
 
-    txt = print_plot('Decennial 2010 vs 2020')
+    txt = print_title('Decennial 2010 vs 2020')
     fig, (axes1, axes2) = pyplot.subplots(1, 2, figsize=(10, 6))
     fig.suptitle(txt, fontweight='bold')
     for subject, ax in {
@@ -55,7 +55,7 @@ if __name__ == '__main__':
         capitalize_labels(ax)
     show_tight()
 
-    txt = print_plot('ACS 2019\u20132023')
+    txt = print_title('ACS 2019\u20132023')
     fig, ((axes1, axes2, axes3), (axes4, axes5, axes6)) = pyplot.subplots(2, 3, figsize=(10, 6))
     fig.suptitle(txt, fontweight='bold')
     for var, ax in {
@@ -103,7 +103,7 @@ if __name__ == '__main__':
     blockgroups_frame[Dimension.ONE] = reduced[:, 0]
     blockgroups_frame[Dimension.TWO] = reduced[:, 1]
 
-    txt = print_plot('Block groups: Hierarchical (unclustered)')
+    txt = print_title('Block groups: Hierarchical (unclustered)')
     pyplot.figure(figsize=(10, 6))
     pyplot.suptitle(txt, fontweight='bold')
     scatterplot(
@@ -124,7 +124,7 @@ if __name__ == '__main__':
     blockgroups_frame['cluster'] = \
         fcluster(linkage(scaled, method='ward'), t=4, criterion='maxclust')
 
-    txt = print_plot('Block groups: Hierarchical (clusters)')
+    txt = print_title('Block groups: Hierarchical (clusters)')
     pyplot.figure(figsize=(10, 6))
     pyplot.suptitle(txt, fontweight='bold')
     scatterplot(
@@ -148,7 +148,7 @@ if __name__ == '__main__':
     pyplot.grid(True)
     pyplot.show()
 
-    txt = print_plot('Block groups: Proposed alternative communities')
+    txt = print_title('Block groups: Proposed alternative communities')
     fig, ax = pyplot.subplots(figsize=(10, 6))
     fig.suptitle(txt, fontweight='bold')
 
@@ -200,7 +200,7 @@ if __name__ == '__main__':
     ax.grid(True)
     pyplot.show()
 
-    txt = print_plot('Block groups: Network graph')
+    txt = print_title('Block groups: Network graph')
     dist = cdist(scaled, scaled)
     graph = Graph()
     blockgroups_frame_size = len(blockgroups_frame)
@@ -236,7 +236,7 @@ if __name__ == '__main__':
     )
     pyplot.show()
 
-    txt = print_plot('Block groups: Montclare vs neighboring areas')
+    txt = print_title('Block groups: Montclare vs neighboring areas')
     fig, ((axes1, axes2, axes3), (axes4, axes5, axes6)) = pyplot.subplots(2, 3, figsize=(10, 6))
     fig.suptitle(txt, fontweight='bold')
     xticks = {

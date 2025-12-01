@@ -1,0 +1,852 @@
+[
+  {
+    "area": "Rogers Park",
+    "stations": [
+      {
+        "station": "Loyola",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Jarvis",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Morse",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Howard",
+        "lines": ["Red", "Yellow", "Purple"]
+      }
+    ]
+  },
+  {
+    "area": "West Ridge",
+    "stations": []
+  },
+  {
+    "area": "Uptown",
+    "stations": [
+      {
+        "station": "Argyle",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Wilson",
+        "lines": ["Purple", "Red"]
+      },
+      {
+        "station": "Lawrence",
+        "lines": ["Red"]
+      }
+    ]
+  },
+  {
+    "area": "Lincoln Square",
+    "stations": [
+      {
+        "station": "Rockwell",
+        "lines": ["Brown"]
+      },
+      {
+        "station": "Montrose-Ravenswood",
+        "lines": ["Brown"]
+      },
+      {
+        "station": "Western-Ravenswood",
+        "lines": ["Brown"]
+      },
+      {
+        "station": "Damen-Ravenswood",
+        "lines": ["Brown"]
+      }
+    ]
+  },
+  {
+    "area": "North Center",
+    "stations": [
+      {
+        "station": "Addison-Ravenswood",
+        "lines": ["Brown"]
+      },
+      {
+        "station": "Irving Park-Ravenswood",
+        "lines": ["Brown"]
+      }
+    ]
+  },
+  {
+    "area": "Lake View",
+    "stations": [
+      {
+        "station": "Addison-North Main",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Southport",
+        "lines": ["Brown"]
+      },
+      {
+        "station": "Diversey",
+        "lines": ["Brown", "Purple"]
+      },
+      {
+        "station": "Wellington",
+        "lines": ["Brown", "Purple"]
+      },
+      {
+        "station": "Sheridan",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Belmont-North Main",
+        "lines": ["Red", "Brown", "Purple"]
+      },
+      {
+        "station": "Paulina",
+        "lines": ["Brown"]
+      }
+    ]
+  },
+  {
+    "area": "Lincoln Park",
+    "stations": [
+      {
+        "station": "Armitage",
+        "lines": ["Brown", "Purple"]
+      },
+      {
+        "station": "Fullerton",
+        "lines": ["Red", "Brown", "Purple"]
+      }
+    ]
+  },
+  {
+    "area": "Near North Side",
+    "stations": [
+      {
+        "station": "North/Clybourn",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Merchandise Mart",
+        "lines": ["Brown", "Purple"]
+      },
+      {
+        "station": "Chicago/State",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Sedgwick",
+        "lines": ["Brown", "Purple"]
+      },
+      {
+        "station": "Clark/Division",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Chicago/Franklin",
+        "lines": ["Brown", "Purple"]
+      },
+      {
+        "station": "Grand/State",
+        "lines": ["Red"]
+      }
+    ]
+  },
+  {
+    "area": "Edison Park",
+    "stations": []
+  },
+  {
+    "area": "Norwood Park",
+    "stations": [
+      {
+        "station": "Harlem-O'Hare",
+        "lines": ["Blue"]
+      }
+    ]
+  },
+  {
+    "area": "Jefferson Park",
+    "stations": [
+      {
+        "station": "Jefferson Park",
+        "lines": ["Blue"]
+      }
+    ]
+  },
+  {
+    "area": "Forest Glen",
+    "stations": []
+  },
+  {
+    "area": "North Park",
+    "stations": []
+  },
+  {
+    "area": "Albany Park",
+    "stations": [
+      {
+        "station": "Francisco",
+        "lines": ["Brown"]
+      },
+      {
+        "station": "Kedzie-Ravenswood",
+        "lines": ["Brown"]
+      },
+      {
+        "station": "Kimball",
+        "lines": ["Brown"]
+      }
+    ]
+  },
+  {
+    "area": "Portage Park",
+    "stations": []
+  },
+  {
+    "area": "Irving Park",
+    "stations": [
+      {
+        "station": "Montrose-O'Hare",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Irving Park-O'Hare",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Addison-O'Hare",
+        "lines": ["Blue"]
+      }
+    ]
+  },
+  {
+    "area": "Dunning",
+    "stations": []
+  },
+  {
+    "area": "Montclare",
+    "stations": []
+  },
+  {
+    "area": "Belmont Cragin",
+    "stations": []
+  },
+  {
+    "area": "Hermosa",
+    "stations": []
+  },
+  {
+    "area": "Avondale",
+    "stations": [
+      {
+        "station": "Belmont-O'Hare",
+        "lines": ["Blue"]
+      }
+    ]
+  },
+  {
+    "area": "Logan Square",
+    "stations": [
+      {
+        "station": "Logan Square",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Western/Milwaukee",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "California/Milwaukee",
+        "lines": ["Blue"]
+      }
+    ]
+  },
+  {
+    "area": "Humboldt Park",
+    "stations": []
+  },
+  {
+    "area": "West Town",
+    "stations": [
+      {
+        "station": "Grand/Milwaukee",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Chicago/Milwaukee",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Damen/Milwaukee",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Division/Milwaukee",
+        "lines": ["Blue"]
+      }
+    ]
+  },
+  {
+    "area": "Austin",
+    "stations": [
+      {
+        "station": "Cicero-Congress",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Laramie",
+        "lines": ["Green"]
+      },
+      {
+        "station": "Austin-Lake",
+        "lines": ["Green"]
+      },
+      {
+        "station": "Central-Lake",
+        "lines": ["Green"]
+      },
+      {
+        "station": "Cicero-Lake",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "West Garfield Park",
+    "stations": [
+      {
+        "station": "Pulaski-Congress",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Pulaski-Lake",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "East Garfield Park",
+    "stations": [
+      {
+        "station": "Kedzie-Lake",
+        "lines": ["Green"]
+      },
+      {
+        "station": "Kedzie-Homan",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "California-Lake",
+        "lines": ["Green"]
+      },
+      {
+        "station": "Conservatory-Central Park",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "Near West Side",
+    "stations": [
+      {
+        "station": "Morgan",
+        "lines": ["Green", "Pink"]
+      },
+      {
+        "station": "Racine",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Polk",
+        "lines": ["Pink"]
+      },
+      {
+        "station": "Damen-Lake",
+        "lines": ["Green"]
+      },
+      {
+        "station": "UIC-Halsted",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Illinois Medical District",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Ashland-Lake",
+        "lines": ["Green", "Pink"]
+      },
+      {
+        "station": "Western-Congress",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Clinton-Congress",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Clinton-Lake",
+        "lines": ["Green", "Pink"]
+      }
+    ]
+  },
+  {
+    "area": "North Lawndale",
+    "stations": [
+      {
+        "station": "Central Park",
+        "lines": ["Pink"]
+      },
+      {
+        "station": "Pulaski-Douglas",
+        "lines": ["Pink"]
+      },
+      {
+        "station": "Kedzie-Douglas",
+        "lines": ["Pink"]
+      },
+      {
+        "station": "Kostner",
+        "lines": ["Pink"]
+      }
+    ]
+  },
+  {
+    "area": "South Lawndale",
+    "stations": [
+      {
+        "station": "California-Douglas",
+        "lines": ["Pink"]
+      }
+    ]
+  },
+  {
+    "area": "Lower West Side",
+    "stations": [
+      {
+        "station": "18th",
+        "lines": ["Pink"]
+      },
+      {
+        "station": "Ashland-Midway",
+        "lines": ["Orange"]
+      },
+      {
+        "station": "Western-Douglas",
+        "lines": ["Pink"]
+      },
+      {
+        "station": "Damen",
+        "lines": ["Pink"]
+      }
+    ]
+  },
+  {
+    "area": "Loop",
+    "stations": [
+      {
+        "station": "Washington/Wabash",
+        "lines": ["Brown", "Orange", "Pink", "Purple", "Green"]
+      },
+      {
+        "station": "LaSalle",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Clark/Lake",
+        "lines": ["Brown", "Orange", "Pink", "Purple", "Green", "Blue"]
+      },
+      {
+        "station": "Lake/State",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Washington/Wells",
+        "lines": ["Brown", "Orange", "Pink", "Purple"]
+      },
+      {
+        "station": "Quincy/Wells",
+        "lines": ["Brown", "Orange", "Pink", "Purple"]
+      },
+      {
+        "station": "Library",
+        "lines": ["Brown", "Orange", "Pink", "Purple"]
+      },
+      {
+        "station": "Harrison",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Monroe/Dearborn",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Washington/Dearborn",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Adams/Wabash",
+        "lines": ["Brown", "Orange", "Pink", "Purple", "Green"]
+      },
+      {
+        "station": "LaSalle/Van Buren",
+        "lines": ["Brown", "Orange", "Pink", "Purple"]
+      },
+      {
+        "station": "Monroe/State",
+        "lines": ["Red"]
+      },
+      {
+        "station": "State/Lake",
+        "lines": ["Brown", "Orange", "Pink", "Purple", "Green"]
+      },
+      {
+        "station": "Jackson/Dearborn",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "Jackson/State",
+        "lines": ["Red"]
+      }
+    ]
+  },
+  {
+    "area": "Near South Side",
+    "stations": [
+      {
+        "station": "Roosevelt/Wabash",
+        "lines": ["Orange", "Green"]
+      },
+      {
+        "station": "Roosevelt/State",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Cermak-McCormick Place",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "Armour Square",
+    "stations": [
+      {
+        "station": "Cermak-Chinatown",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Sox-35th-Dan Ryan",
+        "lines": ["Red"]
+      }
+    ]
+  },
+  {
+    "area": "Douglas",
+    "stations": [
+      {
+        "station": "35-Bronzeville-IIT",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "Oakland",
+    "stations": []
+  },
+  {
+    "area": "Fuller Park",
+    "stations": [
+      {
+        "station": "Garfield-Dan Ryan",
+        "lines": ["Red"]
+      },
+      {
+        "station": "47th-Dan Ryan",
+        "lines": ["Red"]
+      }
+    ]
+  },
+  {
+    "area": "Grand Boulevard",
+    "stations": [
+      {
+        "station": "Indiana",
+        "lines": ["Green"]
+      },
+      {
+        "station": "51st",
+        "lines": ["Green"]
+      },
+      {
+        "station": "47th-South Elevated",
+        "lines": ["Green"]
+      },
+      {
+        "station": "43rd",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "Kenwood",
+    "stations": []
+  },
+  {
+    "area": "Washington Park",
+    "stations": [
+      {
+        "station": "Garfield-South Elevated",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "Hyde Park",
+    "stations": []
+  },
+  {
+    "area": "Woodlawn",
+    "stations": [
+      {
+        "station": "King Drive",
+        "lines": ["Green"]
+      },
+      {
+        "station": "Cottage Grove",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "South Shore",
+    "stations": []
+  },
+  {
+    "area": "Chatham",
+    "stations": [
+      {
+        "station": "79th",
+        "lines": ["Red"]
+      },
+      {
+        "station": "87th",
+        "lines": ["Red"]
+      }
+    ]
+  },
+  {
+    "area": "Avalon Park",
+    "stations": []
+  },
+  {
+    "area": "South Chicago",
+    "stations": []
+  },
+  {
+    "area": "Burnside",
+    "stations": []
+  },
+  {
+    "area": "Calumet Heights",
+    "stations": []
+  },
+  {
+    "area": "Roseland",
+    "stations": [
+      {
+        "station": "95th/Dan Ryan",
+        "lines": ["Red"]
+      }
+    ]
+  },
+  {
+    "area": "Pullman",
+    "stations": []
+  },
+  {
+    "area": "South Deering",
+    "stations": []
+  },
+  {
+    "area": "East Side",
+    "stations": []
+  },
+  {
+    "area": "West Pullman",
+    "stations": []
+  },
+  {
+    "area": "Riverdale",
+    "stations": []
+  },
+  {
+    "area": "Hegewisch",
+    "stations": []
+  },
+  {
+    "area": "Garfield Ridge",
+    "stations": [
+      {
+        "station": "Midway Airport",
+        "lines": ["Orange"]
+      }
+    ]
+  },
+  {
+    "area": "Archer Heights",
+    "stations": [
+      {
+        "station": "Pulaski-Midway",
+        "lines": ["Orange"]
+      }
+    ]
+  },
+  {
+    "area": "Brighton Park",
+    "stations": [
+      {
+        "station": "Kedzie-Midway",
+        "lines": ["Orange"]
+      }
+    ]
+  },
+  {
+    "area": "McKinley Park",
+    "stations": [
+      {
+        "station": "35th/Archer",
+        "lines": ["Orange"]
+      }
+    ]
+  },
+  {
+    "area": "Bridgeport",
+    "stations": [
+      {
+        "station": "Halsted-Midway",
+        "lines": ["Orange"]
+      }
+    ]
+  },
+  {
+    "area": "New City",
+    "stations": []
+  },
+  {
+    "area": "West Elsdon",
+    "stations": []
+  },
+  {
+    "area": "Gage Park",
+    "stations": [
+      {
+        "station": "Western-Midway",
+        "lines": ["Orange"]
+      }
+    ]
+  },
+  {
+    "area": "Clearing",
+    "stations": []
+  },
+  {
+    "area": "West Lawn",
+    "stations": []
+  },
+  {
+    "area": "Chicago Lawn",
+    "stations": []
+  },
+  {
+    "area": "West Englewood",
+    "stations": [
+      {
+        "station": "Ashland/63rd",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "Englewood",
+    "stations": [
+      {
+        "station": "63rd-Dan Ryan",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Halsted/63rd",
+        "lines": ["Green"]
+      }
+    ]
+  },
+  {
+    "area": "Greater Grand Crossing",
+    "stations": [
+      {
+        "station": "69th",
+        "lines": ["Red"]
+      }
+    ]
+  },
+  {
+    "area": "Ashburn",
+    "stations": []
+  },
+  {
+    "area": "Auburn Gresham",
+    "stations": []
+  },
+  {
+    "area": "Beverly",
+    "stations": []
+  },
+  {
+    "area": "Washington Heights",
+    "stations": []
+  },
+  {
+    "area": "Mount Greenwood",
+    "stations": []
+  },
+  {
+    "area": "Morgan Park",
+    "stations": []
+  },
+  {
+    "area": "O'Hare",
+    "stations": [
+      {
+        "station": "Cumberland",
+        "lines": ["Blue"]
+      },
+      {
+        "station": "O'Hare Airport",
+        "lines": ["Blue"]
+      }
+    ]
+  },
+  {
+    "area": "Edgewater",
+    "stations": [
+      {
+        "station": "Berwyn",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Thorndale",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Bryn Mawr",
+        "lines": ["Red"]
+      },
+      {
+        "station": "Granville",
+        "lines": ["Red"]
+      }
+    ]
+  }
+]

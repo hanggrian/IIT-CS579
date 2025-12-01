@@ -1,0 +1,16 @@
+# lint
+pylint==3.2.5
+rulebook-pylint==0.1
+regex
+# main
+ipykernel
+python-dotenv
+colorama
+census
+us
+pandas
+matplotlib
+seaborn
+networkx
+scipy
+scikit-learn

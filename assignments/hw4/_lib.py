@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from os import getenv
 from sys import stdout, stderr, exit as sysexit
 
@@ -95,7 +94,6 @@ class Sequence:
     SPANISH: str = '_003E'
 
 
-@dataclass
 class _Internals:
     census: Census | None = None
 
