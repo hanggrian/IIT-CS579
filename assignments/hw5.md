@@ -320,6 +320,30 @@ graph LR
   classDef structural fill: lightgreen, stroke: green, stroke-width: 2px
 ```
 
+```mermaid
+graph LR
+  A((A)):::structural
+  B((B))
+  C((C))
+  D((D))
+  E((E)):::structural
+  F((F))
+
+  A --- B
+  A --- C
+  A === E
+  A --- F
+  B --- C
+  B --- D
+  B --- E
+  C --- D
+  C --- E
+  D --- F
+  E --- F
+
+  classDef structural fill: lightblue, stroke: blue, stroke-width: 2px
+```
+
 ## Problem 2
 
 > Using the graph from problem 1,
@@ -331,7 +355,7 @@ Iterate all permutations of partitions $P_1$ and $P_2$ to find the cut sizes.
 The minimum cut size is 4, found in $P_1 = \lbrace A, B, C, E \rbrace$ and
 $P_2 = \lbrace D, F \rbrace$.
 
-Parition $P_1$ | Parition $P_2$ | Crossing edges | Cut size
+Partition $P_1$ | Partition $P_2$ | Crossing edges | Cut size
 --- | --- | --- | ---:
 A, B, C, D | E, F | A &rarr; E<br>A &rarr; F<br>B &rarr; E<br>C &rarr; E<br>E &rarr; F | 5
 A, B, C, E | D, F | A &rarr; F<br>B &rarr; D<br>C &rarr; D<br>E &rarr; F | 4
@@ -380,7 +404,7 @@ graph LR
 For both partitions of size 3, the minimum cut size is 5 as seen in
 $P_1 = \lbrace A, E, F \rbrace$ and $P_2 = \lbrace B, C, D \rbrace$.
 
-Partition $P_1$ | Parition $P_2$ | Crossing edges | Cut size
+Partition $P_1$ | Partition $P_2$ | Crossing edges | Cut size
 --- | --- | --- | ---:
 A, E, F | B, C, D | A &rarr; B<br>A &rarr; C<br>E &rarr; B<br>E &rarr; C<br>F &rarr; D | 5
 A, B, C | D, E, F | A &rarr; E<br>A &rarr; F<br>B &rarr; D<br>B &rarr; E<br>C &rarr; D<br>C &rarr; E | 6
@@ -429,16 +453,23 @@ $$
   P_1 &= \lbrace A, B, C, E \rbrace \\\\
   P_2 &= \lbrace D, F \rbrace \\\\
   \texttt{RATIO-CUT}(P_1, P_2) &=
-    \frac{\texttt{CUT}(P_1, P_2)}{|P_1|} +
-    \frac{\texttt{CUT}(P_1, P_2)}{|P_2|} \\\\
-  &= \frac{4}{4} + \frac{4}{2} \\\\
-  &= 1 + 2 &= \mathbf{3} \\\\
+    \frac{1}{2} \cdot
+    \left(
+      \frac{\texttt{CUT}(P_1, P_2)}{|P_1|} +
+      \frac{\texttt{CUT}(P_1, P_2)}{|P_2|}
+    \right) \\\\
+  &= \frac{1}{2} \cdot \left(\frac{4}{4} + \frac{4}{2}\right) \\\\
+  &= \frac{1}{2} \cdot (1 + 2) \\\\
+  &= \frac{1}{2} \cdot 3 &= \mathbf{\frac{3}{2}} \\\\
   \texttt{NORMALIZED-CUT}(P_1, P_2) &=
-    \frac{\texttt{CUT}(P_1, P_2)}{\sum_{v \in P_1} \deg(v)} +
-    \frac{\texttt{CUT}(P_1, P_2)}{\sum_{v \in P_2} \deg(v)} \\\\
-  &= \frac{4}{16} + \frac{4}{6} \\\\
-  &= \frac{12}{48} + \frac{32}{48} \\\\
-  &= \frac{44}{48} &= \mathbf{\frac{11}{12}}
+    \frac{1}{2} \cdot
+    \left(
+      \frac{\texttt{CUT}(P_1, P_2)}{\sum_{v \in P_1} \deg(v)} +
+      \frac{\texttt{CUT}(P_1, P_2)}{\sum_{v \in P_2} \deg(v)}
+    \right) \\\\
+  &= \frac{1}{2} \cdot \left(\frac{4}{16} + \frac{4}{6}\right) \\\\
+  &= \frac{1}{2} \cdot \left(\frac{44}{48}\right) \\\\
+  &= \frac{1}{2} \cdot \left(\frac{11}{12}\right) &= \mathbf{\frac{11}{24}}
 \end{align}
 $$
 
@@ -448,10 +479,12 @@ $$
 \begin{align}
   P_1 &= \lbrace A, E, F \rbrace \\\\
   P_2 &= \lbrace B, C, D \rbrace \\\\
-  \texttt{RATIO-CUT}(P_1, P_2) &= \frac{5}{3} + \frac{5}{3} &=
-    \mathbf{\frac{10}{3}} \\\\
-  \texttt{NORMALIZED-CUT}(P_1, P_2) &= \frac{5}{11} + \frac{5}{11} &=
-    \mathbf{\frac{10}{11}}
+  \texttt{RATIO-CUT}(P_1, P_2) &=
+    \frac{1}{2} \cdot \left(\frac{5}{3} + \frac{5}{3}\right) \\\\
+  &= \frac{1}{2} \cdot \left(\frac{10}{3}\right) &= \mathbf{\frac{5}{3}} \\\\
+  \texttt{NORMALIZED-CUT}(P_1, P_2) &=
+    \frac{1}{2} \cdot \left(\frac{5}{11} + \frac{5}{11}\right) \\\\
+  &= \frac{1}{2} \cdot \left(\frac{10}{11}\right) &= \mathbf{\frac{5}{11}}
 \end{align}
 $$
 
@@ -461,7 +494,7 @@ Looking at the cut size, the 4-2 partition is preferable because it is smaller.
 The 4-2 partition is also preferable in the ratio cut. However, the 3-3
 partition is slightly better in normalized cut.
 
-Metric | Partitions $\lvert P_1 \rvert = 4$ and $\lvert P_2 \rvert = 2$ | Partitions $\lvert P_1 \rvert = 3$ and $\lvert P_2 \rvert = 3$
+Metric | Partitions $\lvert P_1 \rvert = 4, \lvert P_2 \rvert = 2$ | Partitions $\lvert P_1 \rvert = 3, \lvert P_2 \rvert = 3$
 --- | ---: | ---:
 Cut size | 4 | 5
 Ratio cut | 3 | 10/3
@@ -471,8 +504,8 @@ Normalized cut | 11/12 | 10/11
 
 > Social Media Mining (SMM) *Ch. 6, problem 7:*
 >
-> > > **Community Detection**
-> > >
+> > **Community Detection**
+> >
 > > > ```mermaid
 > > > graph LR
 > > >   1((v<sub>1</sub>))
@@ -512,12 +545,12 @@ Normalized cut | 11/12 | 10/11
 > > > ```
 > > >
 > > > *Figure 6.8:* Minimum Cut (A) and Two More Balanced Cuts (B and C) in a
-      Graph.
+> > > Graph.
 > >
 > > For Figure 6.8:
 > >
 > > - Compute Jaccard and Cosine similarity between nodes $v_4$ and $v_8$,
-      assuming that the neighborhood of a node excludes the node itself.
+> >   assuming that the neighborhood of a node excludes the node itself.
 
 Let $A$, $B$ be the neighborhood of $v_4$ and $v_8$, respectively, excluding the
 vertices themselves. Calculate the intersection and union of the two sets. Then,
@@ -539,7 +572,7 @@ $$
 $$
 
 > > - Compute Jaccard and Cosine similarity when the node is included in the
-      neighborhood.
+> >   neighborhood.
 
 When the vertices themselves are included, both A and B will have an additional
 vertex.
@@ -566,7 +599,7 @@ $$
 > > **Community Evolution**
 > >
 > > Normalized mutual information (NMI) is used to evaluate community detection
-    results when the actual communities (labels) are known beforehand.
+> > results when the actual communities (labels) are known beforehand.
 > >
 > > - What are the maximum and minimum values for the NMI? Provide details.
 
@@ -623,9 +656,9 @@ the detected and ground truth partitions.
 > > > ```
 > > >
 > > > Figure 6.15: Community Evaluation Example. Circles represent communities,
-      and items inside the circles represent members. Each item is represented
-      using a symbol, **&plus;, &times;,** or **&triangle;,** that denotes the
-      item's true label.
+> > > and items inside the circles represent members. Each item is represented
+> > > using a symbol, **&plus;, &times;,** or **&triangle;,** that denotes the
+> > > item's true label.
 > >
 > > Compute NMI for Figure 6.15.
 
@@ -746,7 +779,7 @@ $$
 > > **Community Evaluation**
 > >
 > > Why is high precision not enough? Provide an example to show that both
-    precision and recall are important.
+> > precision and recall are important.
 
 In the context of community detection, high precision itself is not considered
 sufficient since it only measures the accuracy of the detected communities
@@ -853,11 +886,11 @@ $$
 \end{align}
 $$
 
-Label | Matching cluster | True positive $TP$
---- | --- | ---:
-$L_1: \lbrace +, \ldots \rbrace$ | $C_2$ | 4
-$L_2: \lbrace \times, \ldots \rbrace$ | $C_1$ | 4
-$L_3: \lbrace \triangle, \ldots \rbrace$ | $C_3$ | 3
+Label | Matching cluster | True positive $TP$ | False positive $FP$ | False negative $FN$
+--- | --- | ---: | ---: | ---:
+$L_1: \lbrace +, \ldots \rbrace$ | $C_2$ | 4 | 5 - 4 = 1 | 8 - 4 = 4
+$L_2: \lbrace \times, \ldots \rbrace$ | $C_1$ | 4 | 7 - 4 = 3 | 5 - 4 = 1
+$L_3: \lbrace \triangle, \ldots \rbrace$ | $C_3$ | 3 | 6 - 3 = 3 | 5 - 3 = 2
 
 Specific to each label, calculate precision, recall and F-measure.
 
@@ -939,7 +972,7 @@ this experiment.
 > > **Diffusion of Innovation**
 > >
 > > Simulate internal-, external-, and mixed-influence models in a program. How
-    are the saturation levels different for each model?
+> > are the saturation levels different for each model?
 
 Internal, external and mixed in diffusion models refer to how the saturation
 levels differ based on the source of influence. With external influence, where
@@ -1005,8 +1038,8 @@ compatibility and security.
 > > **Information Cascades**
 > >
 > > Follow the ICM procedure until it converges for the following graph. Assume
-    that node $i$ activates node $j$ when $i − j ≡ 1 \pmod{3}$ and node $5$ is
-    activated at time 0.
+> > that node $i$ activates node $j$ when $i − j ≡ 1 \pmod{3}$ and node $5$ is
+> > activated at time 0.
 > >
 > > ```mermaid
 > > graph LR
