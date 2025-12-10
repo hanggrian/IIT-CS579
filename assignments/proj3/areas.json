@@ -813,7 +813,8 @@
       },
       {
         "station": "Ashland-Lake",
-        "lines": ["Green", "Pink"]
+        "lines": ["Green", "Pink"],
+        "years": []
       },
       {
         "station": "Western-Congress",

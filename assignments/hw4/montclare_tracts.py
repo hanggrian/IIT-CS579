@@ -9,14 +9,15 @@ FRAME_COLUMNS = ['state', 'county', 'tract']
 
 def fetch_tracts(title, call_client, year, columns):
     print(f'Fetching {title}... ', end='')
-    result = \
-        call_client(get_census()).get(
-            list(columns.keys()),
-            geo={'for': 'tract:*', 'in': f'state:{IL.fips} county:031'},
-            year=year,
-        )
     print('100%')
-    frame = DataFrame(result).rename(columns=columns)
+    frame = \
+        DataFrame(
+            call_client(get_census()).get(
+                list(columns.keys()),
+                geo={'for': 'tract:*', 'in': f'state:{IL.fips} county:031'},
+                year=year,
+            ),
+        ).rename(columns=columns)
     return frame[frame['tract'].isin(MONTCLARE_TRACTS)] \
         [FRAME_COLUMNS + list(columns.values())].copy()
 

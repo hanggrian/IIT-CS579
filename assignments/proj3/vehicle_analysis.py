@@ -9,9 +9,9 @@ from _lib import load_csvs, COMMUNITY_AREA_KEY, YEAR_KEY, POPULATION_KEY
 CENTRAL_AREAS = ['Loop', 'Near South Side', 'Near West Side']
 
 CENTRAL_POPULATION_KEY = 'Central population'
-CENTRAL_VEHICLES_KEY = 'Total vehicles'
+TOTAL_VEHICLES_KEY = 'Total vehicles'
 NORMALIZED_CENTRAL_POPULATION_KEY = 'Normalized central population'
-NORMALIZED_CENTRAL_VEHICLES_KEY = 'Normalized total vehicles'
+NORMALIZED_TOTAL_VEHICLES_KEY = 'Normalized total vehicles'
 
 if __name__ == '__main__':
     acs_frames = load_csvs()
@@ -29,22 +29,23 @@ if __name__ == '__main__':
     aggregated_frame = \
         combined_frame.groupby([COMMUNITY_AREA_KEY, YEAR_KEY])[POPULATION_KEY].sum().reset_index()
 
-    time_series_data = aggregated_frame.pivot(
-        index=YEAR_KEY,
-        columns=COMMUNITY_AREA_KEY,
-        values=POPULATION_KEY,
-    )
+    time_series_data = \
+        aggregated_frame.pivot(
+            index=YEAR_KEY,
+            columns=COMMUNITY_AREA_KEY,
+            values=POPULATION_KEY,
+        )
 
-    central_pop_trend = time_series_data[CENTRAL_AREAS].sum(axis=1).rename(CENTRAL_POPULATION_KEY)
     combined_trends = \
         DataFrame({
-            f'{CENTRAL_POPULATION_KEY} (workers)': central_pop_trend,
-            CENTRAL_VEHICLES_KEY: vehicles_frame['vehicles'],
+            f'{CENTRAL_POPULATION_KEY} (workers)':
+                time_series_data[CENTRAL_AREAS].sum(axis=1).rename(CENTRAL_POPULATION_KEY),
+            TOTAL_VEHICLES_KEY: vehicles_frame['vehicles'],
         })
     combined_trends[NORMALIZED_CENTRAL_POPULATION_KEY] = \
         minmax_scale(combined_trends[f'{CENTRAL_POPULATION_KEY} (workers)'])
-    combined_trends[NORMALIZED_CENTRAL_VEHICLES_KEY] = \
-        minmax_scale(combined_trends[CENTRAL_VEHICLES_KEY])
+    combined_trends[NORMALIZED_TOTAL_VEHICLES_KEY] = \
+        minmax_scale(combined_trends[TOTAL_VEHICLES_KEY])
 
     fig, ax = pyplot.subplots(figsize=(10, 6))
     pyplot.suptitle(
@@ -61,11 +62,11 @@ if __name__ == '__main__':
     )
     ax.plot(
         combined_trends.index,
-        combined_trends[NORMALIZED_CENTRAL_VEHICLES_KEY],
+        combined_trends[NORMALIZED_TOTAL_VEHICLES_KEY],
         marker='s',
         linestyle='--',
         color='red',
-        label=NORMALIZED_CENTRAL_VEHICLES_KEY,
+        label=NORMALIZED_TOTAL_VEHICLES_KEY,
     )
     ax.set_xlabel('Year')
     ax.set_ylabel('Normalized value (min-max scaling)')

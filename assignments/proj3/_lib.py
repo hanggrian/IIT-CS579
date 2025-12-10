@@ -4,15 +4,16 @@ from json import load
 from os import getenv
 from sys import stdout, stderr, exit as sysexit
 from types import SimpleNamespace
+from typing import Any
 
 from census import Census
 from colorama import Fore, Style
 from dotenv import load_dotenv
-from pandas import read_csv
+from pandas import read_csv, DataFrame
 
-COMMUNITY_AREA_KEY = 'Community area'
-YEAR_KEY = 'Year'
-POPULATION_KEY = 'Population'
+COMMUNITY_AREA_KEY: str = 'Community area'
+YEAR_KEY: str = 'Year'
+POPULATION_KEY: str = 'Population'
 
 
 def warn(message: str) -> None:
@@ -38,12 +39,12 @@ def get_census() -> Census:
     return census
 
 
-def load_areas():
+def load_areas() -> Any:
     with open('areas.json', 'r', encoding='UTF-8') as file:
         return load(file, object_hook=lambda d: SimpleNamespace(**d))
 
 
-def load_csvs():
+def load_csvs() -> list[DataFrame]:
     file_list = glob('*.csv')
     frames = []
     pattern = re.compile(r'(.+)_(\d{4})\.csv')

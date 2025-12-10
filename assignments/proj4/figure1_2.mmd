@@ -1,0 +1,30 @@
+flowchart LR
+  start(Jupyter<br>notebook) -- fetch --> database[(Census<br>API)]
+  database -- Decennial --> decennialType[<b>Type</b><br>P]
+  database -- ACS --> acsType[<b>Type</b><br>B]
+
+  subgraph Total population
+    direction LR
+    decennialType --- decennialTable1[<b>Subject</b><br>001001]
+    decennialType --- decennialTable2[<b>Subject</b><br>1_001N]
+    decennialTable1 --> decennialYear1@{ shape: lean-r, label: "<b>Year</b><br>2010" }
+    decennialTable2 --> decennialYear2@{ shape: lean-r, label: "<b>Year</b><br>2020" }
+  end
+
+  subgraph Vehicle ownership
+    direction LR
+    acsType --- acsSubject[<b>Subject</b><br>08]
+    acsSubject --- acsTable[<b>Table</b><br>301]
+    acsTable -- _ --- acsSequence[<b>Sequence</b><br>002E]
+    acsSequence --> acsYear1@{ shape: lean-r, label: "<b>Year</b><br>2009" }
+    acsSequence --> acsYear2@{ shape: lean-r, label: "<b>Year</b><br>2013" }
+    acsSequence --> acsYear3@{ shape: lean-r, label: "<b>Year</b><br>2018" }
+    acsSequence --> acsYear4@{ shape: lean-r, label: "<b>Year</b><br>2023" }
+  end
+
+  decennialYear1 --> decennialOutput(CSV files at<br><code>decennial_data/</code>)
+  decennialYear2 --> decennialOutput
+  acsYear1 --> acsOutput(CSV files at<br><code>acs_data/</code>)
+  acsYear2 --> acsOutput
+  acsYear3 --> acsOutput
+  acsYear4 --> acsOutput

@@ -17,8 +17,8 @@ def die(message: str) -> None:
 
 MONTCLARE_TRACTS: list[str] = ['180100', '831600']
 
-TRACTS_FILE = 'montclare_tracts.csv'
-BLOCKGROUPS_FILE = 'montclare_blockgroups.csv'
+TRACTS_FILE: str = 'montclare_tracts.csv'
+BLOCKGROUPS_FILE: str = 'montclare_blockgroups.csv'
 
 
 class Type:

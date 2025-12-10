@@ -18,5 +18,4 @@ dist/
 # personal student information
 assignments/hw2/class_entities.json
 # census API key
-assignments/hw4/.env
-assignments/proj3/.env
+assignments/**/.env

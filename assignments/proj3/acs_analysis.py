@@ -69,13 +69,14 @@ if __name__ == '__main__':
 
     for i, area in enumerate(areas):
         offset = (i - (len(areas) - 1) / 2) * bar_width
-        bars = ax.bar(
-            r + offset,
-            plot_data[area].values,
-            width=bar_width,
-            label=area,
-            color=CTA_COLORS[i],
-        )
+        bars = \
+            ax.bar(
+                r + offset,
+                plot_data[area].values,
+                width=bar_width,
+                label=area,
+                color=CTA_COLORS[i],
+            )
         for bar in bars:
             yval = bar.get_height()
             ax.text(
@@ -98,7 +99,7 @@ if __name__ == '__main__':
     ax.grid(axis='y', linestyle='--', alpha=0.6)
     pyplot.show()
 
-    total = 'Network graph of population trend correlation (16+ workers)'
+    txt = 'Network graph of population trend correlation (16+ workers)'
     print(f'Printing {txt}...')
     time_series_data = \
         aggregated_frame.pivot(

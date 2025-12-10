@@ -1,0 +1,6 @@
+flowchart LR
+  start(Python<br>scripts) -- run --> process1[<code>acs_analysis.py</code>]
+  start -- run --> process2[<code>decennial_analysis.py</code>]
+
+  process1 --> result@{ shape: lean-r, label: "Diagrams" }
+  process2 --> result

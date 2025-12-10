@@ -1,0 +1,20 @@
+flowchart LR
+  start(Manual<br>search) -- get --> process1[Source<br>code]
+  start -- browse --> database2[(Chicago<br>Data Portal)]
+  start -- browse --> database3[(Chicago<br>&quot;L&quot;.org)]
+  start -- download --> database4[(Illinois Secretary<br>of State statistics)]
+
+  subgraph Homework 4
+    process1 -- list --> result1@{ shape: lean-r, label: "Tract<br>IDs" }
+  end
+
+  subgraph Website
+    database2 -- check --> result2@{ shape: lean-r, label: "Region<br>boundaries" }
+    database3 -- list --> result3@{ shape: lean-r, label: "CTA<br>stations" }
+    database4 -- find --> result4@{ shape: lean-r, label: "Chicago<br>vehicles" }
+  end
+
+  result1 --> areas(<code>areas.json</code>)
+  result2 --> areas
+  result3 --> areas
+  result4 --> vehicles(<code>vehicles.json</code>)
