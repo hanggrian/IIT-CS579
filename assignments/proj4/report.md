@@ -24,12 +24,13 @@ hwijaya@hawk.illinoistech.edu
 ## Abstract
 
 There are 125 "L" train stations in Chicago covering most community areas. Using
-public data from the U.S. Census Bureau and the Illinois Secretary of State, this
-report investigates the relationship between the presence of Chicago's "L" train
-stations and vehicle ownership trends across different regions of the city.
-Findings indicate that while vehicle ownership has increased across all regions
-from 2009 to 2023, areas with new "L" train stations added between 2013 and 2018
-experienced a temporary decline in vehicle ownership during that period.
+public data from the U.S. Census Bureau and the Illinois Secretary of State,
+this report investigates the relationship between the presence of Chicago's "L"
+train stations and vehicle ownership trends across different regions of the
+city. Findings indicate that while vehicle ownership has increased across all
+regions from 2009 to 2023, areas with new "L" train stations added between 2013
+and 2018 experienced a temporary decline in vehicle ownership during that
+period.
 
 ## Introduction
 
@@ -201,7 +202,10 @@ citywide.
 $$
 \begin{array}{l c c c}
   \hline
-  \textbf{Region} & \textbf{Population} & \textbf{Ownership} & \textbf{Stations} \\\\
+  \textbf{Region} &
+    \textbf{Population} &
+    \textbf{Ownership} &
+    \textbf{Stations} \\\\
   \hdashline
   \textsf{Central} & 86,830 & 149,977 & 24 \\\\
   & \downarrow & \downarrow & \downarrow \\\\
@@ -327,17 +331,41 @@ increases in vehicle ownership, peaking at the latest data from 2023.
 $$
 \begin{array}{l r r r r}
   \hline
-  \textbf{Area} & \textbf{Ownership 2009} & \textbf{2013} & \textbf{2018} & \textbf{2023} \\\\
+  \textbf{Area} &
+    \textbf{Ownership 2009} &
+    \textbf{2013} &
+    \textbf{2018} &
+    \textbf{2023} \\\\
   \hdashline
   \textsf{Near West Side} & 4,822 & 5,845 & 5,803 & 6,791 \\\\
-   & & \color{green}{+21.2\\%} & \color{red}{-0.7\\%} & \color{green}{+17.0\\%} \\\\
+  &
+    &
+    \color{green}{+21.2\\%} &
+    \color{red}{-0.7\\%} &
+    \color{green}{+17.0\\%} \\\\
   \textsf{Near South Side} & 1,262 & 1,276 & 821 & 7,966 \\\\
-   & & \color{green}{+1.1\\%} & \color{red}{-35.7\\%} & \color{green}{+870.4\\%} \\\\
+  &
+    &
+    \color{green}{+1.1\\%} &
+    \color{red}{-35.7\\%} &
+    \color{green}{+870.4\\%} \\\\
   \textsf{Loop} & 896 & 1,097 & 1,226 & 3,602 \\\\
-   & & \color{green}{+22.4\\%} & \color{green}{+11.8\\%} & \color{green}{+193.8\\%} \\\\
+  &
+    &
+    \color{green}{+22.4\\%} &
+    \color{green}{+11.8\\%} &
+    \color{green}{+193.8\\%} \\\\
   \hdashline
-  \textbf{Total} & \textbf{6,980} & \textbf{8,218} & \textbf{7,850} & \textbf{18,359} \\\\
-   & & \color{green}{+17.7\\%} & \color{red}{-4.5\\%} & \color{green}{+133.9\\%} \\\\
+  \textbf{Total} &
+    \textbf{6,980} &
+    \textbf{8,218} &
+    \textbf{7,850} &
+    \textbf{18,359} \\\\
+  &
+    &
+    \color{green}{+17.7\\%} &
+    \color{red}{-4.5\\%} &
+    \color{green}{+133.9\\%} \\\\
   \hline
 \end{array}
 $$
